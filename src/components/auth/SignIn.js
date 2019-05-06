@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import {connect}  from "react-redux";
 import {signIn}  from "../../store/actions/authActions";
 
-import {Redirect, Link} from "react-router-dom";
+import {Redirect} from "react-router-dom";
+ 
+
 
 class SignIn extends Component {
     state={
@@ -22,45 +24,49 @@ class SignIn extends Component {
         e.preventDefault();
      // console.log(this.state)
      this.props.signIn(this.state);
-    
+
     }
   render() {
-
+ 
     const { authError, auth} =this.props;
     if(auth.uid) return <Redirect to="/"/>
+  
     return (
-      <div className="form-container sign-in-container">
-      <form onSubmit={this.handleSubmit}>
-          <h1>Sign in</h1>
-          <label htmlFor="email">email</label>
-              <input
-               type="email"   
-               id="email" 
-               name="email"
-               value={this.state.email}
-                 placeholder="Enter email"
-                 onChange={this.handleChange}
-                />
-
-<label htmlFor="password">email</label>
-            <input 
-              type="password"
-              id="password" 
-              name="password" 
-               placeholder="Enter password"
-               value={this.state.password}
-               onChange={this.handleChange}
-              
-              />
-              <Link to="/">forgot your password</Link>
-              <button>sign in</button>
-
-              { authError ? 
+    <React.Fragment> 
+      <div className="form-container sign-in-container"
+      >       
+<form onSubmit={this.handleSubmit}>
+ <div className="form-group">
+ <h5>Sign In</h5>
+ <label htmlFor="email_login" hidden>email</label>
+ <input 
+ type="email"  
+ id="email_login" 
+ name="email"
+   placeholder="Enter email"
+   onChange={this.handleChange}
+   /> 
+ <label htmlFor="password_login" hidden>password</label>
+ <input 
+ type="password"
+  id="password_login" 
+  name="password" 
+   placeholder="Enter password"
+   onChange={this.handleChange}
+   /> 
+ 
+ </div>
+   
+  <button type="submit" className="btn btn-primary">Sign in</button>
+<div className="text-danger text-center">{ authError ? 
 (<p>{authError}</p>)
 :(null)
-}
-      </form>
-  </div>
+}</div>
+</form>
+ </div>
+ 
+ 
+  </React.Fragment>
     )
   }
 }
@@ -83,7 +89,3 @@ return {
 }
 
 export default connect( mapStateToProps , mapDispatchToProps)(SignIn) 
-
-
-
-

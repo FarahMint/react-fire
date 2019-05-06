@@ -1,37 +1,77 @@
-import React from 'react';
-import { BrowserRouter , Switch, Route} from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter , Switch, Route, Redirect} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Dashboard from "./components/dashboard/Dashboard"
-
-import ProjectDetails from "./components/projects/ProjectDetails"
-import SignIn from "./components/auth/SignIn"
-import SignUp from "./components/auth/SignUp"
 import CreateProject from "./components/projects/CreateProject"
 import UpdateProject from "./components/projects/UpdateProject"
-
-const App =()=> {
+import ProjectDetails from "./components/projects/ProjectDetails"
  
-    return (
-      <BrowserRouter>
-      
-          <Navbar />
-          <Switch>
 
-<Route path="/" exact component={Dashboard}></Route>
-<Route path="/project/:id"  exact component={ProjectDetails}>
-</Route>
-<Route path="/signIn"  exact component={SignIn}>
-</Route>
-<Route path="/signUp"  exact component={SignUp}>
-</Route>
-<Route path="/create"  exact component={CreateProject}>
-</Route>
-<Route path="/update/:id"  exact component={UpdateProject}>
-</Route>
+
+import GlobalForm from "./components/auth/GlobalForm";
+
+
+// connect to redux state
+// access firebase prop on state to see whether user login
+import {connect}  from "react-redux";
+
+class App extends Component {
+ state ={
+    isActive: false
+ }
+  handleSignForm = ()=>{
+    this.setState((prevState)=>({
+      isActive: !prevState.isActive
+    }))
+  }
+  render() {
+    // console.log(this.props)
+    const {auth} = this.props;
+    return (
+     
+      <BrowserRouter>
+   
+          <Navbar />
+          {!auth.uid &&
+          <GlobalForm {...this.state} handleSignForm ={this.handleSignForm }/>}
+          
+          <Switch>
+          <React.Fragment> 
+            {auth.uid && <Route path="/" exact component={Dashboard}></Route>}
+            {auth.uid && <Route path="/create" exact component={CreateProject}></Route>}
+            {auth.uid && <Route path="/update/:id" exact component={UpdateProject}></Route>}
+            <Route path="/project/:id"  exact component={ProjectDetails}></Route>
+            <Route exact path="/signIn" render={() => (
+  auth.uid &&(
+    <Redirect to="/"/>
+  )  
+)}/>
+            <Route exact path="/signUp" render={() => (
+  auth.uid &&(
+    <Redirect to="/"/>
+  )  
+)}/>
+
+
+
+ 
+
+ 
+ 
+</React.Fragment>
           </Switch>
-      
+        
       </BrowserRouter>
+     
     );
   }
+}
 
-export default App;
+const mapStateToProps =(state)=>{
+  // console.log(state)
+return{
+auth: state.firebase.auth
+}
+}
+
+export default connect(mapStateToProps)(App);

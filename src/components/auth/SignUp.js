@@ -3,6 +3,7 @@ import {Redirect} from "react-router-dom";
 
 import {connect} from "react-redux";
 import {signUp} from "../../store/actions/authActions";
+ 
 
  class SignUp extends Component {
     state={
@@ -30,54 +31,56 @@ import {signUp} from "../../store/actions/authActions";
     const { auth, authError} = this.props;
     if(auth.uid) return <Redirect to="/"/>
     return (
-         
-      <div className="form-container sign-up-container">
-      <form onSubmit={this.handleSubmit}>
-          <h1>create an account</h1>
-        
-          
-          <label htmlFor="firstName" hidden>firstName</label>  
-          <input 
-          type="text"
-          name="firstName"
-          placeholder="first Name" 
-          value={this.state.firstName}
-          onChange={this.handleChange}
-          />
-          
-          <label htmlFor="lastName" hidden>lastName</label>  
-          <input 
-          type="text"
-          name="lastName"
-          placeholder="last Name" 
-          value={this.state.lastName}
-          onChange={this.handleChange} 
-          />
-
-
-<label htmlFor="email" hidden>email</label>
-      <input 
-      type="email" 
-      placeholder="Email"
-      value={this.state.email}
-      onChange={this.handleChange}
-       />
-
-          <label htmlFor="password" hidden>password</label>
-          <input type="password" placeholder="Password" 
-           value={this.state.password}
-           onChange={this.handleChange}
-           />
-          <button>sign up</button>
-
-          { authError ? 
+      <React.Fragment>
+      <div className="form-container sign-up-container">        
+<form onSubmit={this.handleSubmit}>
+ <div className="form-group">
+ <h5>Sign Up</h5>
+ <label htmlFor="firstName" hidden>firstName</label>
+ <input 
+ type="firstName"  
+ id="firstName" 
+ name="firstName"
+   placeholder="Enter your first Name"
+   onChange={this.handleChange}
+   /> 
+ <label htmlFor="lastName" hidden>last Name</label>
+ <input 
+ type="lastName"  
+ id="lastName" 
+ name="lastName"
+   placeholder="Enter your last Name"
+   onChange={this.handleChange}
+   /> 
+ <label htmlFor="email_register" hidden>email</label>
+ <input 
+ type="email"  
+ id="email_register" 
+ name="email"
+   placeholder="Enter email"
+   onChange={this.handleChange}
+   /> 
+ <label htmlFor="password_register" hidden>password</label>
+ <input 
+ type="password"
+  id="password_register" 
+  name="password" 
+   placeholder="Enter password"
+   onChange={this.handleChange}
+   /> 
+ 
+ </div>
+   
+  <button type="submit" className="btn btn-primary">Sign Up</button>
+      <div className="text-danger text-center">
+    { authError ? 
     <p >{authError}</p>
   : null
   }
-
-      </form>
-  </div>
- 
+      </div>
+</form>
+ </div>
+ </React.Fragment>
     )
   }
 }
