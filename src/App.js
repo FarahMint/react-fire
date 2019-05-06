@@ -1,28 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter , Switch, Route} from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Dashboard from "./components/dashboard/Dashboard"
 
-class App extends Component {
-  render() {
+import ProjectDetails from "./components/projects/ProjectDetails"
+import SignIn from "./components/auth/SignIn"
+import SignUp from "./components/auth/SignUp"
+import CreateProject from "./components/projects/CreateProject"
+import UpdateProject from "./components/projects/UpdateProject"
+
+const App =()=> {
+ 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+      
+          <Navbar />
+          <Switch>
+
+<Route path="/" exact component={Dashboard}></Route>
+<Route path="/project/:id"  exact component={ProjectDetails}>
+</Route>
+<Route path="/signIn"  exact component={SignIn}>
+</Route>
+<Route path="/signUp"  exact component={SignUp}>
+</Route>
+<Route path="/create"  exact component={CreateProject}>
+</Route>
+<Route path="/update/:id"  exact component={UpdateProject}>
+</Route>
+          </Switch>
+      
+      </BrowserRouter>
     );
   }
-}
 
 export default App;
