@@ -36,8 +36,8 @@ class SignIn extends Component {
       <div className="form-container sign-in-container"
       >       
 <form onSubmit={this.handleSubmit}>
- <div className="form-group">
- <h5>Sign In</h5>
+ <div className="form-group auth">
+ 
  <label htmlFor="email_login" hidden>email</label>
  <input 
  type="email"  
@@ -57,7 +57,7 @@ class SignIn extends Component {
  
  </div>
    
-  <button type="submit" className="btn btn-primary">Sign in</button>
+  <button type="submit" className="btn-primary">Sign in</button>
 <div className="text-danger text-center">{ authError ? 
 (<p>{authError}</p>)
 :(null)

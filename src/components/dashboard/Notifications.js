@@ -10,7 +10,7 @@ const Notifications =({notifications})=> {
       {notifications && notifications.map(item =>{
       return(
             <li key={item.id}>
-           <span>  {item.user}</span>
+           <h5>  {item.user}</h5>
            <span>  {item.content}</span>
            <div>
            {moment(item.time.toDate()).fromNow()}

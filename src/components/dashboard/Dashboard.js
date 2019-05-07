@@ -19,11 +19,13 @@ import {Redirect} from "react-router-dom";
       <div className="dashboard">
       
         <div className="grid-one">
-
+      {(projects &&  projects.length > 0) ?
+       (<h2>Current project.</h2>) : 
+      (<h2>Start creating project.</h2>)}
         <ProjectList  projects={projects} auth={auth}/>
         </div>
         <div className="grid-two">
-        {notifications && notifications.length>=0&& <Notifications notifications={notifications}/>}
+        {notifications && notifications.length > 0 && <Notifications notifications={notifications}/>}
       
             </div>
         

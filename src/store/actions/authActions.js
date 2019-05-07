@@ -17,6 +17,8 @@ return (dispatch, getState, {getFirebase, getFirestore}) =>{
 
 }
 
+
+// https://github.com/prescottprue/react-redux-firebase/issues/508
 export const signOut= ()=>{
     // getFirebase to logout
 return (dispatch, getState, {getFirebase}) =>{

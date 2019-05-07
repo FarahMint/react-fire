@@ -34,8 +34,8 @@ import {signUp} from "../../store/actions/authActions";
       <React.Fragment>
       <div className="form-container sign-up-container">        
 <form onSubmit={this.handleSubmit}>
- <div className="form-group">
- <h5>Sign Up</h5>
+ <div className="form-group auth">
+  
  <label htmlFor="firstName" hidden>firstName</label>
  <input 
  type="firstName"  
@@ -71,7 +71,7 @@ import {signUp} from "../../store/actions/authActions";
  
  </div>
    
-  <button type="submit" className="btn btn-primary">Sign Up</button>
+  <button type="submit" className="btn-primary">Sign Up</button>
       <div className="text-danger text-center">
     { authError ? 
     <p >{authError}</p>
