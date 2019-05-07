@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/src/config/#keys.js
+/src/config/#keys
 /.pnp
 .pnp.js
 .env
