@@ -32,11 +32,14 @@ class App extends Component {
       <BrowserRouter>
    
           <Navbar />
+
+          <div className="app__container">
           {!auth.uid &&
           <GlobalForm {...this.state} handleSignForm ={this.handleSignForm }/>}
-          
+           
           <Switch>
-          <React.Fragment> 
+            
+          
             {auth.uid && <Route path="/" exact component={Dashboard}></Route>}
             {auth.uid && <Route path="/create" exact component={CreateProject}></Route>}
             {auth.uid && <Route path="/update/:id" exact component={UpdateProject}></Route>}
@@ -51,16 +54,9 @@ class App extends Component {
     <Redirect to="/"/>
   )  
 )}/>
-
-
-
- 
-
- 
- 
-</React.Fragment>
           </Switch>
-        
+          </div>
+
       </BrowserRouter>
      
     );
