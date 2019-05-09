@@ -73,10 +73,7 @@ background: #521751;
     text-transform: uppercase;
 }
  
-.side-drawer a:hover ,
-.side-drawer a:active{
- color: #fa923f;
-}
+ 
 
 @media(min-width:768px){
     .side-drawer{

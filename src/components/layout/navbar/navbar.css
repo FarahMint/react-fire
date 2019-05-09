@@ -38,18 +38,20 @@ display: flex;
 
 .toolbar_navigation-items li{
 list-style:none;
- padding: 0 .5rem; 
+  padding: 0 .75rem; 
 }
 
 
 .toolbar_navigation-items a{
     color:#fefefe;
+    padding: 1rem;
 text-decoration: none; 
 text-transform: uppercase;
 }
 .toolbar_navigation-items a:hover ,
 .toolbar_navigation-items a:active{
- color: #fa923f;
+    background: #fefefe;
+    color:#521751;
 }
 
 .badge{
@@ -71,17 +73,15 @@ text-transform: uppercase;
     order:4;
 }
 .toolbar_navigation-items li:nth-child(2){
-    order:3;
+    order:1;
 }
 .toolbar_navigation-items li:nth-child(3){
     order:2;
 }
 .toolbar_navigation-items li:nth-child(4){
-   order:1;
+   order:3;
 }
-.toolbar_navigation-items li:nth-child(5){
-   order:4;
-}
+ 
 
 
 

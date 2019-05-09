@@ -39,6 +39,10 @@
   color:#fefefe; 
   background:  #521751;
   }
+
+  .project__summary p{
+        padding: .75rem;
+        }
    
   .project__summary p span{
    font-weight: 100;
@@ -57,7 +61,5 @@
         padding:1rem;
         }
       
-        .project__summary p{
-          padding: .75rem;
-          }
+     
       }
