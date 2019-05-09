@@ -1,0 +1,40 @@
+
+/* DASHBOARD */
+.dashboard{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2rem;
+    margin: 0 auto;   
+   }
+   
+   .grid-one{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+   }
+
+
+/* Change the direction of the form when the browser window is 700px wide or more */
+@media only screen and (min-width: 700px) { 
+    p{
+      line-height: 2rem;
+    }
+   
+  /* CONTAINER */
+    .app__container {
+      display: flex;
+      justify-content: center;
+      width: 100vw;
+      /* align-items: center; */
+      /* height: 100vh; */
+  }
+  
+  /* DASHBOARD NOTIF */
+  .grid-two{
+    display: flex;
+    justify-content: center;  
+    /* align-items:center; */
+    text-align: center;
+   }
+  }

@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 // to connect compo to redux store 
 import { connect } from "react-redux"
-import {getProjectDetails,  updateProject} from "../../store/actions/projectActions";
+import {getProjectDetails,  updateProject} from "../../../store/actions/projectActions";
 
 import {Redirect} from "react-router-dom";
 

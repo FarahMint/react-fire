@@ -1,6 +1,9 @@
 import React from 'react';
 import moment from "moment";
  
+
+import "./projectSummary.css";
+
 const ProjectSummary =({project, auth }) => {
   return (
     <div className="project__summary">

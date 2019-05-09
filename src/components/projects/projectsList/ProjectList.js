@@ -1,6 +1,8 @@
 import React from 'react'
-import ProjectSummary from "./ProjectSummary";
+import ProjectSummary from "./projectSummary/ProjectSummary";
 import {Link} from 'react-router-dom';
+
+import "./projectList.css";
 const ProjectList =({projects,auth})=> {
  
   return (

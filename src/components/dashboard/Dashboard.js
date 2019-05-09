@@ -1,6 +1,6 @@
 import React from 'react'
-import Notifications from "./Notifications"
-import ProjectList from "../projects/ProjectList";
+import Notifications from "./notifications/Notifications"
+import ProjectList from "../projects/projectsList/ProjectList";
 
 import {connect} from "react-redux"
 // use 2 HOC & chain together
@@ -10,7 +10,7 @@ import {firestoreConnect} from "react-redux-firebase";
 
 import {Redirect} from "react-router-dom";
 
-
+import "./dashboard.css"
   const Dashboard =({projects, auth, notifications})=> {
 
 
@@ -22,8 +22,11 @@ import {Redirect} from "react-router-dom";
       {(projects &&  projects.length > 0) ?
        (<h2>Current project.</h2>) : 
       (<h2>Start creating project.</h2>)}
+
+
         <ProjectList  projects={projects} auth={auth}/>
         </div>
+        
         <div className="grid-two">
         {notifications && notifications.length > 0 && <Notifications notifications={notifications}/>}
       

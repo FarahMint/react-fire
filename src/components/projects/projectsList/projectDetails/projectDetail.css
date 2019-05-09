@@ -1,0 +1,73 @@
+
+
+.app__container .card__projDetails {
+  height: fit-content;
+}
+/* PROJECT DETAILS  */
+
+.card__projDetails{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    color: #333;
+    background-color: #fefefe;
+    
+}
+
+.card__projDetails h5{
+font-weight: 700;
+padding:1rem;
+text-transform: uppercase;
+background: #521751;
+color:#fefefe;
+}
+.card__projDetails p{
+padding: .75rem;
+}
+
+.small__text{
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+
+button.icon__trash,
+.project__btn-link{  
+  align-self: flex-end
+}
+
+
+button.icon{
+background-color:transparent;
+border: 1px solid  #177E89;
+width: 2rem;
+padding: .35rem;
+border-radius: 50%;
+cursor:pointer;
+margin: 0 .45rem ;
+margin-bottom: .75rem;
+color:#177E89;
+-webkit-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out;
+}
+
+button.icon__pen a{
+color:#177E89;  
+
+}
+button.icon__trash:hover,
+button.icon__pen:hover{
+border: none;
+-webkit-transform: scale(1.25);
+        transform: scale(1.25);
+background-color:#fefefe;
+color: #ff4b2b;
+}
+
+button.icon__pen:hover > a{
+color: #ff4b2b;
+}
+
+
+

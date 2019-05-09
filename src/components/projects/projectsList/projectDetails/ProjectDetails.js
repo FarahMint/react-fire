@@ -12,8 +12,8 @@ import {
   // Redirect,
    Link} from "react-router-dom";
 
-import {  deleteProject} from "../../store/actions/projectActions";
-
+import {  deleteProject} from "../../../../store/actions/projectActions";
+import "./projectDetail.css";
  class ProjectDetails extends Component {
 
    handledelete =(id)=>{

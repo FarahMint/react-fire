@@ -35,9 +35,10 @@ class SignIn extends Component {
     <React.Fragment> 
       <div className="form-container sign-in-container"
       >       
+     
 <form onSubmit={this.handleSubmit}>
  <div className="form-group auth">
- 
+ <h2>login</h2>
  <label htmlFor="email_login" hidden>email</label>
  <input 
  type="email"  

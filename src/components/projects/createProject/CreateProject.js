@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // to connect compo to redux store 
 import { connect } from "react-redux"
-import {createProject} from "../../store/actions/projectActions";
+import {createProject} from "../../../store/actions/projectActions";
 
 import {Redirect} from "react-router-dom";
 

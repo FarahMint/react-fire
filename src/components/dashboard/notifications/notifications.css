@@ -1,0 +1,41 @@
+/* NOTIFICATIONS */
+
+.grid-two{
+    display:none;
+   }
+   
+   
+   
+   .notifications__card {
+    background: rgb(244, 245, 247)
+   }
+   .notifications__card h3{
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+   }
+   
+   
+   .notifications li {
+    background-color:  rgba(170, 181, 181, 0.7);
+    color:#333;
+    font-size: .95rem;
+    margin-bottom: .45rem;
+    padding: .75rem;
+    border-radius: 15px;
+   }
+   
+   .notifications li > h5{
+     text-transform: capitalize;
+     font-size: 1.5rem; 
+   }
+   
+   
+
+   /* Change the direction of the form when the browser window is 700px wide or more */
+@media only screen and (min-width: 700px) { 
+.notifications li{ 
+ font-size:.95rem;
+ margin-bottom: .35rem;
+ padding: .95rem;
+}
+}
