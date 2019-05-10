@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import {getProjectDetails,  updateProject} from "../../../store/actions/projectActions";
 
 import {Redirect} from "react-router-dom";
-
+import "./updateProject.css"
  class UpdateProject extends Component {
     state={
         title:"",
@@ -57,8 +57,8 @@ import {Redirect} from "react-router-dom";
     return (
          
 <form onSubmit={this.handleSubmit}>
- <div className="form-group">
- <h3>Update your Project</h3>
+ <div className="form-group update__project">
+ <h2>Update your Project</h2>
  <label htmlFor="title" hidden>title</label>
  <input 
  type="title"  
@@ -79,7 +79,7 @@ import {Redirect} from "react-router-dom";
    value={this.state.content || ''}
    onChange={this.handleChange}
    > </textarea>
-   <button type="submit" className="btn btn-primary">Update</button>
+   <button type="submit" className="btn-primary btn__update">Update</button>
  </div>
    
 

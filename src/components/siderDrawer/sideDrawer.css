@@ -34,22 +34,22 @@
 }
 .side-drawer li:hover > a,
 .side-drawer li:active > a{
-background: #521751;
-color:#fefefe;
+background: var(--mainPurple);
+color:var(--mainWhite);
 }
 
 .side-drawer li:hover,
 .side-drawer li:active{
-color:#fefefe;
-background: #521751;
+color:var(--mainWhite);
+background:var(--mainPurple);
 }
 
 .badge{
     order:3;
 }
 .badge:hover{
-    color: #521751;
-    background: #fefefe;
+    color: var(--mainPurple);
+    background: var(--mainWhite);
 }
 .side-drawer li:nth-child(2){
     order:2;
@@ -67,7 +67,7 @@ background: #521751;
 
 
 .side-drawer li a{
-  color: #521751;
+  color: var(--mainPurple);
     text-decoration: none;
     font-size:1.2rem;
     text-transform: uppercase;

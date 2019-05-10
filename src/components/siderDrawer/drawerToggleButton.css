@@ -20,7 +20,7 @@
 .toggle-button__line{
     width: 30px;
     height: 2px;
-    background: #fefefe;
+    background: var(--mainWhite);
     transition: transform .3s ease-out;
   
 }

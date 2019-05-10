@@ -13,12 +13,15 @@
 
 
 :root {
+  --mainBlack: #333;
   --mainWhite: #fefefe;
   --mainGreen:  #177e89;
   --mainRose: #ff416c;
   --mainOrange: #ff4b2b;
-  --mainOrange: #521751;
+  --mainPurple: #521751;
   --lightGrey:#DBE3E7;
+  --mainBlue: #1B7AF6;
+ 
 }
 
 
@@ -101,26 +104,26 @@ form{
  align-items: center;
 }
 
-.form-group h3{
+/* .form-group h3{
 text-align: center;
 text-transform: uppercase; 
-
-}
+} */
 
 
 .form-group input,
 .form-group textarea {
 width: 100%;
-padding: 2.25rem;
+padding: 1.25rem;
 border:transparent;
-border-bottom: 1px solid #1B1B3A  ;
+border:none ;
 outline: none;
 font-size: 1.25rem;
+margin-top:1rem
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-border-bottom: 1px solid #177e89;
+border-bottom: 2px solid var(--mainGreen);
 }
 .form-group button  {
  align-self: center;
@@ -129,7 +132,7 @@ border-bottom: 1px solid #177e89;
 
 /*FORM CONTAINER */
 .form-container form{
- background: #fff;
+ background: var(--mainWhite);
   display:flex;
   flex-direction:column;
   padding:0 30px;
@@ -143,7 +146,7 @@ border-bottom: 1px solid #177e89;
 /*FORM CONTAINER INPUT*/
 .form-container input{
  background: #F7F9FA;
- border: 1px solid #DBE3E7;
+ border: 1px solid  var(--lightGrey);
  border-radius: 5px;
  flex-direction:column;
  padding: .75rem;
@@ -160,9 +163,9 @@ border-bottom: 1px solid #177e89;
 
 button{
  border-radius:20px;
- /* background: #ff4b2b; */
- background: #521751;
- color: #fff;
+ 
+ background: var(--mainPurple);
+ color: var(--mainWhite);
  font-size: 1rem;
  font-weight:bold;
  padding:12px 45px;

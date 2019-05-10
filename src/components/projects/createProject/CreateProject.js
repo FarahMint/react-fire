@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import { connect } from "react-redux"
 import {createProject} from "../../../store/actions/projectActions";
 
-import {Redirect} from "react-router-dom";
 
+import {Redirect} from "react-router-dom";
+import "./createProject.css"
  class CreateProject extends Component {
     state={
         title:"",
@@ -31,8 +32,8 @@ import {Redirect} from "react-router-dom";
     return (
          
 <form onSubmit={this.handleSubmit}>
- <div className="form-group">
- <h3>create your project</h3>
+ <div className="form-group create__project">
+ <h2>create your project</h2>
  <label htmlFor="title" hidden>title</label>
  <input 
  type="title"  
@@ -52,7 +53,7 @@ import {Redirect} from "react-router-dom";
    value={this.state.content}
    onChange={this.handleChange}
    > </textarea>
-  <button type="submit" className="btn btn-primary">Create</button>
+  <button type="submit" className="btn-primary btn__create">Create</button>
  </div>
    
  

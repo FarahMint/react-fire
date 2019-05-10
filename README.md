@@ -1,6 +1,7 @@
  
  Project Management tool build with React.js and Redux, and  with  firebase for the backend with  authentication , storage, cloud function and hoisting functionalities.
  
+ [https://www.loom.com/share/11628c5d8ae4482e939a17c064295e51](url)
  
  MOBILE SCREENSHOT
  
