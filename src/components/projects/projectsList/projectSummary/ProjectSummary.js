@@ -21,7 +21,12 @@ const ProjectSummary =({project, auth }) => {
     </React.Fragment>
  )}
  </p>
- 
+
+ {/* working on img upload */}
+ {/* { project.imageUrl &&
+<img src={project.imageUrl}  alt={project.title} />
+} */}
+
   <p className="card-text text-muted">created  {moment(project.createdAt.toDate()).calendar()}</p> 
   
 </div>

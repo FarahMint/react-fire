@@ -1,24 +1,42 @@
+import {
+    CREATE_PROJECT,
+    CREATE_PROJECT_ERROR,
+    GET_ALL_PROJECTS,
+    // GET_ALL_PROJECTS_ERROR ,
+    GET_PROJECT, 
+    // GET_PROJECT_ERROR, 
+    UPDATE_PROJECT, 
+    // UPDATE_ERROR, 
+    DELETE_PROJECT,
+    // DELETE_ERROR,
+    // ADD_DOCUMENT_STARTED, ADD_DOCUMENT_COMPLETED,ADD_DOCUMENT_ERROR
+   
+  } from './storageActionTypes';
+
 export const createProject = (project)=>{
     return (dispatch, getState, {getFirebase, getFirestore})=>{
 // 1) make async call to db
 const firestore= getFirestore();
 const profile = getState().firebase.profile;
 const authorId = getState().firebase.auth.uid;
-        firestore.collection("projects").add({
+
+firestore.collection("projects").add({
            ...project, 
            authorFirstName: profile.firstName, 
            authorLastName: profile.lastName, 
            authorId:authorId, 
            createdAt: new Date() 
-        }).then(()=>
+        }).then(()=>{
         // 2) dispatch action
-dispatch({
-    type:"CREATE_PROJECT",
-    project
-})
+                dispatch({
+                    type:CREATE_PROJECT,
+                    project
+                })
+                // console.log(getState().firebase);
+            }
         ).catch(err=>{
             dispatch({
-                type:"CREATE_PROJECT_ERROR",
+                type:CREATE_PROJECT_ERROR,
                 err
             })
         })
@@ -30,6 +48,7 @@ dispatch({
 // GET ALL PROJECTS
 export const getAllProjects = ( )=>{
     return (dispatch, getState, {getFirebase, getFirestore})=>{
+     
 // 1) make async call to db
 const firestore= getFirestore();
  let projects= [];
@@ -37,12 +56,13 @@ const firestore= getFirestore();
     querySnapshot.forEach((doc)=> {
         // doc.data() is never undefined for query doc snapshots
         // console.log(doc.id, " => ", doc.data());
+     
         projects.push(doc.data());
         console.log( projects);
     });
     
         dispatch({
-            type:"GET_ALL_PROJECTS",
+            type:GET_ALL_PROJECTS,
             projects
         })
    
@@ -65,7 +85,7 @@ let docRef = firestore.collection("projects").doc(id);
 docRef.get().then( (doc)=> {
         project = doc.data()
         dispatch({
-            type:"GET_PROJECT",
+            type:GET_PROJECT,
             project,
         })
    
@@ -80,12 +100,13 @@ export const updateProject = ( id, updateProject)=>{
     return (dispatch, getState, {getFirebase, getFirestore})=>{
 // 1) make async call to db
 const firestore= getFirestore();
+
   firestore.collection("projects").doc(id).update({
       ...updateProject
   }).then( ()=> {
        
         dispatch({
-            type:"UPDATE_PROJECT",
+            type:UPDATE_PROJECT,
             updateProject,
         })
    
@@ -103,7 +124,7 @@ export const deleteProject = (id) => {
      firestore.collection('projects').doc(id).delete()
      .then( ()=> {
         dispatch({
-            type:"DELETE_PROJECT",
+            type:DELETE_PROJECT,
             id,
         })
    
@@ -113,3 +134,4 @@ export const deleteProject = (id) => {
 
     }
    }
+  

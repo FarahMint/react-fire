@@ -9,8 +9,16 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "@google-cloud/storage": "^2.5.0",
+    "child-process-promise": "^2.2.1",
     "firebase-admin": "~7.0.0",
-    "firebase-functions": "^2.2.0"
+    "firebase-functions": "^2.2.0",
+    "fs-extra": "^8.0.1",
+    "sharp": "^0.22.1"
   },
+  "engines": {
+    "node": "8"
+  },
+  
   "private": true
 }

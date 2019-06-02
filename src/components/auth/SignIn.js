@@ -30,7 +30,8 @@ class SignIn extends Component {
  
     const { authError, auth} =this.props;
     if(auth.uid) return <Redirect to="/"/>
-  
+ 
+   
     return (
     <React.Fragment> 
       <div className="form-container sign-in-container"

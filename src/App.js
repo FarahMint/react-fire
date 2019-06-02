@@ -10,6 +10,7 @@ import Notifications from "./components/dashboard/notifications/Notifications";
 import CreateProject from "./components/projects/createProject/CreateProject";
 import UpdateProject from "./components/projects/updateProject/UpdateProject";
 import ProjectDetails from "./components/projects/projectsList/projectDetails/ProjectDetails";
+ 
 
 
 

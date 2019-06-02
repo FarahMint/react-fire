@@ -2,13 +2,8 @@ const functions = require('firebase-functions');
  const admin = require("firebase-admin");
 //To interact with firebase SDK to access services
  admin.initializeApp(functions.config().firebase);
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
 
+ 
 
 const createNotif =( notification =>{
     return admin
@@ -29,9 +24,10 @@ exports.projectCreated = functions.firestore.document("projects/{projectId}")
     }
     return createNotif(notification);
 })
+
 exports.userJoined = functions.auth.user()
 .onCreate(user =>{
-
+    
    return admin.firestore().collection("users").doc(user.uid)
    .get()
    .then( doc =>{
@@ -44,3 +40,6 @@ exports.userJoined = functions.auth.user()
     return createNotif(notification);
    })   
 })
+  
+
+   

@@ -34,6 +34,9 @@ import "./projectDetail.css";
     
   <h5>{project.title} - </h5>
   <p>{project.content}</p>
+  { project.imageUrl &&
+<img src={project.imageUrl}  alt={project.title} />
+}
   
   <div className="small__text">
   

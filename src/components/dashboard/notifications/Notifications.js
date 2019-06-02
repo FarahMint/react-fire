@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from "moment";
-import {FaRedditAlien} from "react-icons/fa"
+ 
 
 import {connect} from "react-redux"
 // use 2 HOC & chain together
@@ -22,8 +22,7 @@ const Notifications =({notifications})=> {
       {notifications && notifications.map(item =>{
       return(
             <li key={item.id}>
-           <h5> 
-             <FaRedditAlien/> {item.user}</h5>
+           <h5> {item.user}</h5>
            <span>  {item.content}</span>
            <div>
            {moment(item.time.toDate()).fromNow()}

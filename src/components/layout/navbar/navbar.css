@@ -3,7 +3,7 @@
     top:0;
     left:0;
     position:fixed;
-    background: #521751;
+    background: #25255f;
   
     height: 60px;
     z-index:90;
@@ -51,7 +51,7 @@ text-transform: uppercase;
 .toolbar_navigation-items a:hover ,
 .toolbar_navigation-items a:active{
     background: #fefefe;
-    color:#521751;
+   color: #595ad4;
 }
 
 .badge{
@@ -59,14 +59,14 @@ text-transform: uppercase;
     border-radius: 50%;
     padding: .45rem;
     text-transform: uppercase;
-    background: #521751;
+    background: #595ad4;
     color:#fefefe;
 }
  
 
 
 .badge:hover{
-    color: #521751;
+    color:  #595ad4;
     background: #fefefe;
 }
 .toolbar_navigation-items li:nth-child(1){
@@ -99,6 +99,6 @@ text-transform: uppercase;
         }
         .badge{
             background: #fefefe;
-            color:#521751;
+            color:#595ad4;
         }
 }

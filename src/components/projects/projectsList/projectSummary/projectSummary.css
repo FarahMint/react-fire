@@ -36,7 +36,7 @@
   padding:.5rem;
   text-transform: uppercase;
   color:var(--mainWhite); 
-  background:var(--mainPurple);
+  background:#595ad4;
   }
 
   .project__summary p{
@@ -49,6 +49,9 @@
    line-height: .95rem;
    letter-spacing: .25rem;
    text-transform: capitalize;
+  }
+  .project__summary img{
+  width:15rem;
   }
 
 

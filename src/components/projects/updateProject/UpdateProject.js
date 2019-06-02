@@ -10,7 +10,7 @@ import "./updateProject.css"
  class UpdateProject extends Component {
     state={
         title:"",
-       content:""
+       content:"",
     }
 
    handleChange=(e)=>{
@@ -46,7 +46,7 @@ import "./updateProject.css"
   
   const {title, content}=  this.props.project.project
          this.setState({
-           title, content
+           title, content 
           })
         }
       }
@@ -57,8 +57,8 @@ import "./updateProject.css"
     return (
          
 <form onSubmit={this.handleSubmit}>
- <div className="form-group update__project">
  <h2>Update your Project</h2>
+ <div className="form-group update__project">
  <label htmlFor="title" hidden>title</label>
  <input 
  type="title"  

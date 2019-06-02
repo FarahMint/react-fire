@@ -8,3 +8,7 @@
 .btn__update{
     background: var(--mainBlue)
 }
+.btn__update:hover{
+    background-color: #25255f;
+    color:var(--mainWhite);
+  }

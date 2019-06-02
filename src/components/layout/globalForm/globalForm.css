@@ -1,15 +1,9 @@
 
 /* COLOR */
 .overlay{
-        background: var(--mainRose);
-        background: -webkit-gradient( linear, left top, right top, from(#521751), to(rgb(255, 65, 108))) no-repeat 0 0 / cover;
-        background: -webkit-linear-gradient( left, #521751, rgb(255, 65, 108)) no-repeat 0 0 / cover;
-        background: linear-gradient( to right, #521751, rgb(255, 65, 108)) no-repeat 0 0 / cover;
+background-color: #343480;
         color: var(--mainWhite);
         }
-
-
-
 
 button{
          transition:transform 80ms ease-in; 
@@ -26,15 +20,17 @@ button{
 
 /* BUTTON SIGNUP/ SIGNIN */
 button#sign-in:hover{
-    background-color: var(--lightGrey);
-    color:var(--mainOrange);;
+    background-color: var(--mainWhite);
+    color:var(--mainGreen);
     }
-button#sign-up:hover{
-    background-color: var(--lightGrey);
+button#sign-up:hover
+{
+    background-color: var(--mainWhite);
     color:var(--mainRose);
     }
-.btn-primary:hover{
-    background-color: var(--mainGreen);
+ 
+    .btn-primary:hover{
+        background-color: var(--mainPurple);
     }
 
 /* CONTAINER REGISTER FORM */

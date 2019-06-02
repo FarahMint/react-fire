@@ -14,12 +14,16 @@
     background-color: #fefefe;
     
 }
+.card__projDetails img{
+   width:40%;
+    
+}
 
 .card__projDetails h5{
 font-weight: 700;
 padding:1rem;
 text-transform: uppercase;
-background: #521751;
+background: #595ad4;
 color:#fefefe;
 }
 .card__projDetails p{
@@ -32,6 +36,12 @@ align-items: center;
 justify-content: flex-end;
 }
 
+ 
+.btn__create:hover{
+  background-color: #25255f;
+  color:var(--mainWhite);
+}
+
 button.icon__trash,
 .project__btn-link{  
   align-self: flex-end
@@ -40,20 +50,20 @@ button.icon__trash,
 
 button.icon{
 background-color:transparent;
-border: 1px solid  #177E89;
+border: 1px solid  #25255f;
 width: 2rem;
 padding: .35rem;
 border-radius: 50%;
 cursor:pointer;
 margin: 0 .45rem ;
 margin-bottom: .75rem;
-color:#177E89;
+color: #25255f;
 -webkit-transition: all .3s ease-in-out;
 transition: all .3s ease-in-out;
 }
 
 button.icon__pen a{
-color:#177E89;  
+color: #25255f;  
 
 }
 button.icon__trash:hover,

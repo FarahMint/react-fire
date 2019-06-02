@@ -44,7 +44,8 @@ const mapStateToProps= (state)=>{
   return{
     projects:state.firestore.ordered.projects,
     auth:state.firebase.auth,
-    notifications: state.firestore.ordered.notifications
+    notifications: state.firestore.ordered.notifications,
+    
   }
 }
 
