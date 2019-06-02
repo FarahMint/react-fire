@@ -5,12 +5,16 @@ import {createProject,
   // saveFileProject
 } from "../../../store/actions/projectActions";
 
+import  PreviewPicture from "./PreviewPicture";
+
 import {Redirect} from "react-router-dom";
 import "./createProject.css"
  class CreateProject extends Component {
     state={
         title:"",
        content:"",
+       picture:null,
+       pictureUrl:null
     }
 
 //      fileHandler= (e)=>{
@@ -32,6 +36,23 @@ import "./createProject.css"
       //console.log(this.state)
       this.props.createProject(this.state)
     this.props.history.push("/")
+    }
+
+
+    displayPicture =(event)=>{
+      // 1 read the file
+      let reader = new FileReader();
+      // 2 get the file 
+      let file = event.target.files[0]
+      console.log(file);
+      reader.onload =()=>{
+        this.setState({
+          picture:file,
+          pictureUrl: reader.result
+        })
+      };
+      reader.readAsDataURL(file);
+
     }
   render() {
 
@@ -65,11 +86,19 @@ import "./createProject.css"
   
  </div>
 
+ <div>
+
+ </div>
+
 {/* working on file upload */}
- {/* <div>
-   <input type="file" name="fileUpload" onChange={this.fileHandler}/>
- </div> */}
- 
+ <div>
+   <input 
+   type="file" 
+   name="fileUpload" onChange={this.displayPicture}/>
+ </div>
+ {this.state.pictureUrl &&
+ <PreviewPicture  pictureUrl ={this.state.pictureUrl}/>
+}
   <button type="submit" className="btn-primary btn__create">Create</button>
  </div>
    

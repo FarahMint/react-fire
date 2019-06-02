@@ -8,7 +8,8 @@ const ProjectSummary =({project, auth }) => {
   return (
     <div className="project__summary">
   
-  <h5>{project.title}</h5>
+  <h5>{project.title} </h5>
+ <img src={project.picture} alt={project.title} className="tile"></img>
   <p>posted by:
  {auth.uid === project.authorId ? (
      <React.Fragment>

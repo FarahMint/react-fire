@@ -7,16 +7,23 @@
 
 .card__projDetails{
     width: 80vw;
-    display: flex;
+  display: flex;
     flex-direction: column;
+ 
     margin: 0 auto;
     color: #333;
-    background-color: #fefefe;
-    
+    background-color: #fefefe;   
 }
+
+.proj__info{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
 .card__projDetails img{
-   width:40%;
-    
+   width:40%;  
 }
 
 .card__projDetails h5{

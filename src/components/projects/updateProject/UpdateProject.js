@@ -11,15 +11,30 @@ import "./updateProject.css"
     state={
         title:"",
        content:"",
+       picture: null,
     }
 
    handleChange=(e)=>{
         this.setState({
-           [e.target.name] : e.target.value,
-           
+           [e.target.name] : e.target.value, 
         })
-    
     }
+
+    // displayPicture =(event)=>{
+    //   // 1 read the file
+    //   let reader = new FileReader();
+    //   // 2 get the file 
+    //   let file = event.target.files[0]
+    //   console.log(file);
+    //   reader.onload =()=>{
+    //     this.setState({
+    //       picture:file,
+    //       pictureUrl: reader.result
+    //     })
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
+
      handleSubmit=(e)=>{
         e.preventDefault();
         const id = this.props.match.params.id;
@@ -44,9 +59,9 @@ import "./updateProject.css"
 
   if (this.props.project.project !== prevProps.project.project) {
   
-  const {title, content}=  this.props.project.project
+  const {title, content, picture}=  this.props.project.project
          this.setState({
-           title, content 
+           title, content ,picture
           })
         }
       }
@@ -79,6 +94,16 @@ import "./updateProject.css"
    value={this.state.content || ''}
    onChange={this.handleChange}
    > </textarea>
+
+{/* <div>
+   <input 
+   type="file" 
+   name="fileUpload" onChange={this.displayPicture}/>
+ </div> */}
+ 
+{/* <img src={this.state.picture}  alt={this.state.title} /> */}
+
+
    <button type="submit" className="btn-primary btn__update">Update</button>
  </div>
    

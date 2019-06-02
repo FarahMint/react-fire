@@ -30,14 +30,16 @@ import "./projectDetail.css";
   // {!auth.uid ?(<Redirect to="/signIn"/>):()}
  
   if(project){
-    return(<div className="card__projDetails">
-    
-  <h5>{project.title} - </h5>
-  <p>{project.content}</p>
-  { project.imageUrl &&
-<img src={project.imageUrl}  alt={project.title} />
-}
-  
+    return(
+    <div className="card__projDetails">
+      <h5>{project.title} - </h5>
+<div className="proj__info">
+      <p>{project.content}</p>
+      { project.picture &&
+    <img src={project.picture}  alt={project.title} />
+    }
+</div>
+
   <div className="small__text">
   
    <p>posted by: 
