@@ -9,7 +9,8 @@ const ProjectSummary =({project, auth }) => {
     <div className="project__summary">
   
   <h5>{project.title} </h5>
- <img src={project.picture} alt={project.title} className="tile"></img>
+  { project.picture && <img src={project.picture} alt={project.title} className="tile"></img>}
+
   <p>posted by:
  {auth.uid === project.authorId ? (
      <React.Fragment>
