@@ -1,3 +1,7 @@
+form.update__project{
+    width: 100%;
+}
+
 .form-group.update__project{ 
     padding: 1.25rem;
     border-radius:5px;
@@ -12,3 +16,13 @@
     background-color: #25255f;
     color:var(--mainWhite);
   }
+
+  @media (max-width:768px){
+    .form-group.update__project{ 
+        box-shadow: none; 
+    }
+    form.update__project h2{ 
+        font-size: 1rem;
+    }
+   
+}

@@ -71,8 +71,8 @@ import "./updateProject.css"
     if(!auth.uid) return <Redirect to="/signIn"/>
     return (
          
-<form onSubmit={this.handleSubmit}>
- <h2>Update your Project</h2>
+<form  className="update__project" onSubmit={this.handleSubmit}>
+ <h2>{`Update your ${this.state.title} Project`}</h2>
  <div className="form-group update__project">
  <label htmlFor="title" hidden>title</label>
  <input 
@@ -86,6 +86,7 @@ import "./updateProject.css"
    /> 
  <label htmlFor="content" hidden>content</label>
  <textarea 
+ rows="10"
  type="content"
   id="content" 
   name="content" 

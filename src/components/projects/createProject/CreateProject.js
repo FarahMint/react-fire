@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import {FaUpload} from "react-icons/fa"
 // to connect compo to redux store 
 import { connect } from "react-redux"
 import {createProject, 
@@ -63,18 +65,21 @@ import "./createProject.css"
 <form onSubmit={this.handleSubmit}>
  <h2>create your project</h2>
  <div className="form-group create__project">
+
  <div>
  <label htmlFor="title" hidden>title</label>
  <input 
  type="title"  
  id="title" 
  name="title"
+ required
   className="form-control"
    placeholder="Enter title"
    onChange={this.handleChange}
    /> 
  <label htmlFor="content" hidden>content</label>
  <textarea 
+ rows="10"
  type="content"
   id="content" 
   name="content" 
@@ -83,26 +88,27 @@ import "./createProject.css"
    value={this.state.content}
    onChange={this.handleChange}
    > </textarea>
-  
  </div>
 
- <div>
-
- </div>
+ 
 
 {/* working on file upload */}
- <div>
+ <div    className="upload__display">
    <input 
    type="file" 
-   name="fileUpload" onChange={this.displayPicture}/>
- </div>
+   className="inputfile"
+   name="fileUpload"
+   accept="image/png, image/jpeg"
+   id="fileUpload" onChange={this.displayPicture}/>
+ <label htmlFor="fileUpload" >
+   <FaUpload/> Choose an image</label>
+
  {this.state.pictureUrl &&
  <PreviewPicture  pictureUrl ={this.state.pictureUrl}/>
 }
-  <button type="submit" className="btn-primary btn__create">Create</button>
  </div>
-   
-
+ </div>
+  <button type="submit" className="btn-primary btn__create">Create</button>
 </form>
  
     )

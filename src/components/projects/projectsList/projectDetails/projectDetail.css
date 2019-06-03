@@ -6,24 +6,26 @@
 /* PROJECT DETAILS  */
 
 .card__projDetails{
-    width: 80vw;
-  display: flex;
-    flex-direction: column;
- 
+   max-width: 800px;
+   width:80%;
     margin: 0 auto;
     color: #333;
-    background-color: #fefefe;   
+    background-color: #fefefe;  
 }
 
 .proj__info{
-  display: flex;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:1rem;
   justify-content: space-between;
-
 }
 
 
 .card__projDetails img{
-   width:40%;  
+ width:100%;
+   height:auto; 
+   overflow: hidden; 
+   margin: 0 auto; 
 }
 
 .card__projDetails h5{
@@ -35,6 +37,7 @@ color:#fefefe;
 }
 .card__projDetails p{
 padding: .75rem;
+word-wrap: break-word;
 }
 
 .small__text{
@@ -88,3 +91,8 @@ color: #ff4b2b;
 
 
 
+@media (max-width:768px){
+  .proj__info{
+    grid-template-columns: 1fr;
+  }
+}

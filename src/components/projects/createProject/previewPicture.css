@@ -1,0 +1,10 @@
+
+.preview img{
+   width: 100%
+}
+
+@media (max-width:768px){
+   .preview img{
+      width: 60%
+   }
+}
