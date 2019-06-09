@@ -31,8 +31,10 @@
    
    
 
-   /* Change the direction of the form when the browser window is 700px wide or more */
-@media only screen and (min-width: 700px) { 
+   /* Change the notification display @   769px wide or more */
+@media only screen and (min-width: 769px) { 
+ 
+
 .notifications li{ 
  font-size:.95rem;
  margin-bottom: .35rem;

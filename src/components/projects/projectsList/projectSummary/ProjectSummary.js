@@ -19,17 +19,20 @@ const ProjectSummary =({project, auth }) => {
  ):
  (
   <React.Fragment>
-  <span>   {project.authorFirstName} {project.authorLastName}</span>
+  <span>   {project.authorFirstName} {project.authorLastName}
+  </span>
     </React.Fragment>
  )}
+
  </p>
+ <p>{moment(project.createdAt.toDate()).calendar()}</p>
 
  {/* working on img upload */}
  {/* { project.imageUrl &&
 <img src={project.imageUrl}  alt={project.title} />
 } */}
 
-  <p className="card-text text-muted">created  {moment(project.createdAt.toDate()).calendar()}</p> 
+  {/* <span>on {moment(project.createdAt.toDate()).calendar()}</span>  */}
   
 </div>
     

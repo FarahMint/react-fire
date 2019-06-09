@@ -3,8 +3,8 @@
 
 .project__list-section{
     display:flex;
-    /* justify-content:space-around; */
-   justify-content:space-between;  
+    justify-content:space-around;
+   /* justify-content:space-between;   */
     flex-wrap: wrap;
    }
    .project__list-section a{

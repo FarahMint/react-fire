@@ -74,7 +74,7 @@ import "./createProject.css"
  name="title"
  required
   className="form-control"
-   placeholder="Enter title"
+   placeholder="Enter a title"
    onChange={this.handleChange}
    /> 
  <label htmlFor="content" hidden>content</label>
@@ -84,7 +84,7 @@ import "./createProject.css"
   id="content" 
   name="content" 
   className="form-control"
-   placeholder="Enter content"
+   placeholder="Enter project description"
    value={this.state.content}
    onChange={this.handleChange}
    > </textarea>

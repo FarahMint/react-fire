@@ -6,12 +6,13 @@ import { connect } from "react-redux"
 import {getProjectDetails,  updateProject} from "../../../store/actions/projectActions";
 
 import {Redirect} from "react-router-dom";
+
 import "./updateProject.css"
  class UpdateProject extends Component {
     state={
         title:"",
        content:"",
-       picture: null,
+       pictureUrl: "",
     }
 
    handleChange=(e)=>{
@@ -20,22 +21,7 @@ import "./updateProject.css"
         })
     }
 
-    // displayPicture =(event)=>{
-    //   // 1 read the file
-    //   let reader = new FileReader();
-    //   // 2 get the file 
-    //   let file = event.target.files[0]
-    //   console.log(file);
-    //   reader.onload =()=>{
-    //     this.setState({
-    //       picture:file,
-    //       pictureUrl: reader.result
-    //     })
-    //   };
-    //   reader.readAsDataURL(file);
-    // }
-
-     handleSubmit=(e)=>{
+  handleSubmit=(e)=>{
         e.preventDefault();
         const id = this.props.match.params.id;
       //console.log(this.state)
@@ -59,9 +45,9 @@ import "./updateProject.css"
 
   if (this.props.project.project !== prevProps.project.project) {
   
-  const {title, content, picture}=  this.props.project.project
+  const {title, content,pictureUrl}=  this.props.project.project
          this.setState({
-           title, content ,picture
+           title, content ,pictureUrl
           })
         }
       }
@@ -71,17 +57,20 @@ import "./updateProject.css"
     if(!auth.uid) return <Redirect to="/signIn"/>
     return (
          
-<form  className="update__project" onSubmit={this.handleSubmit}>
- <h2>{`Update your ${this.state.title} Project`}</h2>
- <div className="form-group update__project">
+<form onSubmit={this.handleSubmit}>
+ <h2>update your project</h2>
+ <div className="form-group create__project">
+
+ <div>
  <label htmlFor="title" hidden>title</label>
  <input 
  type="title"  
  id="title" 
  name="title"
+ value={this.state.title || ''}
+ required
   className="form-control"
-   placeholder="Enter title"
-   value={this.state.title || ''}
+   placeholder="Enter a title"
    onChange={this.handleChange}
    /> 
  <label htmlFor="content" hidden>content</label>
@@ -91,24 +80,14 @@ import "./updateProject.css"
   id="content" 
   name="content" 
   className="form-control"
-   placeholder="Enter content"
-   value={this.state.content || ''}
+   placeholder="Enter project description"
+   value={this.state.content}
    onChange={this.handleChange}
    > </textarea>
-
-{/* <div>
-   <input 
-   type="file" 
-   name="fileUpload" onChange={this.displayPicture}/>
- </div> */}
- 
-{/* <img src={this.state.picture}  alt={this.state.title} /> */}
-
-
-   <button type="submit" className="btn-primary btn__update">Update</button>
  </div>
-   
-
+ <img src={this.state.pictureUrl}  alt={this.state.title} />  
+ </div>
+  <button type="submit" className="btn-primary btn__create">Update</button>
 </form>
  
     )

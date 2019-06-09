@@ -3,8 +3,7 @@
 .dashboard{
     width: 90%;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-column-gap: 2rem;
+    grid-template-columns:  1fr;
     margin: 0 auto;   
    }
    
@@ -16,7 +15,11 @@
 
 
 /* Change the direction of the form when the browser window is 700px wide or more */
-@media only screen and (min-width: 700px) { 
+@media only screen and (min-width: 769px) { 
+
+  .dashboard{
+    grid-template-columns: 3fr 1fr;
+   }
     p{
       line-height: 2rem;
     }
