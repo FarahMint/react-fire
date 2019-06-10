@@ -15,15 +15,16 @@ const Notifications =({notifications})=> {
   return (
   <div className="notifications__card">
    
-      <h3 >notifications</h3>
+     {(notifications && notifications.length > 0 ) ?(<h3>current activities</h3>) : <h3>No activit yet</h3>}
       
       <ul className="notifications">
  
       {notifications && notifications.map(item =>{
       return(
             <li key={item.id}>
-           <h5> {item.user}</h5>
-           <span>  {item.content}</span>
+           {/* <h5> {item.user}</h5> */}
+           <h4> {item.content}</h4>
+           <span>by {item.user}</span>
            <div>
            {moment(item.time.toDate()).fromNow()}
            </div>

@@ -9,7 +9,7 @@ import {
     UPDATE_ERROR, 
     DELETE_PROJECT,
     DELETE_ERROR 
-  } from './storageActionTypes';
+  } from './actionTypes.js';
 
 
 

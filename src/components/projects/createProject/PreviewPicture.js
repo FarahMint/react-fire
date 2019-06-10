@@ -6,7 +6,7 @@ const  PreviewPicture =(props)=> {
     
     return (
         <div className="preview">
-            <img src={pictureUrl}
+            <img src= {pictureUrl }
              alt="test" 
            className="img-thumbnail mb-2 mt-2"/>
         </div>

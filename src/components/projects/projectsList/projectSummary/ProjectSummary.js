@@ -9,7 +9,10 @@ const ProjectSummary =({project, auth }) => {
     <div className="project__summary">
   
   <h5>{project.title} </h5>
-  { project.picture && <img src={project.picture} alt={project.title} className="tile"></img>}
+  { project.picture ? 
+  (<img src={project.picture} alt={project.title} className="tile"></img>) :
+  (<img src={`https://via.placeholder.com/400x300/000000/FFFFFF/?text=${project.title}`} alt={project.title} className="tile"></img>)
+}
 
   <p>posted by:
  {auth.uid === project.authorId ? (

@@ -11,7 +11,7 @@ import {
     DELETE_ERROR,
     // ADD_DOCUMENT_STARTED, ADD_DOCUMENT_COMPLETED,ADD_DOCUMENT_ERROR
    
-  } from '../actions/storageActionTypes';
+  } from '../actions/actionTypes.js';
 
 
 
