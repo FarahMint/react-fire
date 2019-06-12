@@ -2,8 +2,6 @@ import React from 'react'
  import { Link } from 'react-router-dom';
 import { FaGrinBeam , FaGrinStars} from "react-icons/fa"
 
-// import "../auth/globalForm.css";
-
 export default function Overlay(props) {
   return (
     <div className="overlay-container">

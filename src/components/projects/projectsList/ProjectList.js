@@ -4,9 +4,7 @@ import {Link} from 'react-router-dom';
 
 import "./projectList.css";
 const ProjectList =({projects,auth})=> {
- 
   return (
-   
       <div className="project__list-section">
   { /*{we have project we can map*/}
    { projects && projects.map(project =>{
@@ -16,11 +14,6 @@ const ProjectList =({projects,auth})=> {
       </Link>
      )
    })}
- 
-   
-   
-  
-   
     </div>
   )
 }

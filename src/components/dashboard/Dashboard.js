@@ -10,10 +10,9 @@ import {firestoreConnect} from "react-redux-firebase";
 
 import {Redirect} from "react-router-dom";
 
-import "./dashboard.css"
+import "./dashboard.css";
+
   const Dashboard =({projects, auth, notifications})=> {
-
-
    if (!auth.uid)return <Redirect to="/signIn"/>
     return (
       <div className="dashboard">

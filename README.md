@@ -1,5 +1,40 @@
  
  Project Management tool build with React.js and Redux, and  with  firebase for the backend with  authentication , storage, cloud function and hoisting functionalities.
+
+ 	1.	Project management applications build with React, Redux & complete with  Firebase authentication and cloud functions for real time notifications 
+	2.	Firebase firestore use as a real time database to store all the data in
+	3.	Firebase cloud functions for notifications when new user signIn or create a project 
+	4.	Firebase authentication for authentcation flow in the app
+
+FOLDER STRUCTURE
+( ROOT )
+index.js
+app.js
+    components
+        --- auth
+
+        --- dashboard
+            --notifications
+
+        --- layout
+            --backdrop
+            --globalForm
+            --navbar
+            --navLinks
+            --overlay
+            --siderDrawer
+
+        --- projects
+            -- Createproject  
+            -- UpdateProject
+            -- projectslist 
+                  - projectDetails 
+                  - projectSummary 
+    
+    config (firebase configuration)
+    store (redux)
+
+
  
  [https://www.loom.com/share/11628c5d8ae4482e939a17c064295e51](url)
  

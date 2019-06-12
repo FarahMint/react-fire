@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import "./navbar.css";
-import DrawerToggleBUtton from "../../siderDrawer/DrawerToggleButton";
+import DrawerToggleButton from "../siderDrawer/DrawerToggleButton";
 
 import {FaUsers} from "react-icons/fa"
 import SigninLink from "../navLinks/SigninLink";
@@ -21,7 +21,7 @@ const Navbar = (props) => {
   return ( 
 <header className="toolbar">
       <nav className="toolbar__navigation">
-      <DrawerToggleBUtton 
+      <DrawerToggleButton 
       click={props.toggleNavHandler}
       show ={props.show} />
           <div className="toolbar__logo">

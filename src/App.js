@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter , Switch, Route, Redirect} from 'react-router-dom';
 
 import Navbar from './components/layout/navbar/Navbar';
-import SideDrawer from "./components/siderDrawer/SideDrawer";
+import SideDrawer from "./components/layout/siderDrawer/SideDrawer";
 import  BackDrop from "./components/layout/backdrop/Backdrop";
 import GlobalForm from "./components/layout/globalForm/GlobalForm";
 import Dashboard from "./components/dashboard/Dashboard";

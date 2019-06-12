@@ -31,21 +31,19 @@ const Notifications =({notifications})=> {
             </li>
       )
       })}  
-        
-      </ul>
-     
-   
+      </ul>  
   </div>
   )
 }
-
+ 
+// to be able to display notification in mobile 
 const mapStateToProps= (state)=>{
   //console.log(state);
   return{
-    auth:state.firebase.auth,
     notifications: state.firestore.ordered.notifications
   }
 }
+
 
 export default compose(
   connect(mapStateToProps),
