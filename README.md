@@ -1,4 +1,5 @@
- 
+ --NOTES:  curently changing the UI and add a landing page to give more info for users who don't authenticate yet
+
  Project Management tool build with React.js and Redux, and  with  firebase for the backend with  authentication , storage, cloud function and hoisting functionalities.
 
  	1.	Project management applications build with React, Redux & complete with  Firebase authentication and cloud functions for real time notifications 
@@ -11,17 +12,18 @@ FOLDER STRUCTURE
 index.js
 app.js
     components
-        --- auth
+        --- AuthForm
+            --auth
+            --globalForm
+            --overlay
 
         --- dashboard
             --notifications
 
         --- layout
             --backdrop
-            --globalForm
             --navbar
             --navLinks
-            --overlay
             --siderDrawer
 
         --- projects
@@ -39,16 +41,9 @@ app.js
  [https://www.loom.com/share/11628c5d8ae4482e939a17c064295e51](url)
  
  MOBILE SCREENSHOT
- 
- ![ScreenShot_signin_form](https://user-images.githubusercontent.com/18241226/57472406-48da6580-7285-11e9-8fb3-bd8bdf2e2f95.png)
- 
-![ScreenShot_homepage](https://user-images.githubusercontent.com/18241226/57472401-4841cf00-7285-11e9-9588-c10d74a734a7.png)
- 
-![ScreenShot_create_op](https://user-images.githubusercontent.com/18241226/57472397-47a93880-7285-11e9-9579-ac7f0b538bbd.png)
-
-![ScreenShot_projectDetail_page](https://user-images.githubusercontent.com/18241226/57472398-47a93880-7285-11e9-9c25-9ca304de66cb.png)
-
-![ScreenShot_update_op](https://user-images.githubusercontent.com/18241226/57472400-4841cf00-7285-11e9-9852-4b5e5181d8f5.png)
-
-![ScreenShot_nav_when_login](https://user-images.githubusercontent.com/18241226/57472403-4841cf00-7285-11e9-8d5d-1ccba9a1ed6c.png)
-
+![1-large-screen-landing-page](https://user-images.githubusercontent.com/18241226/61409037-4d507980-a8d9-11e9-8ace-47f28f0487e0.png)
+![2-mobile-landing-page](https://user-images.githubusercontent.com/18241226/61409039-4de91000-a8d9-11e9-9f8c-27d545d8a4c2.png)
+![3-mobile-nav-not-auth-yet](https://user-images.githubusercontent.com/18241226/61409040-4de91000-a8d9-11e9-875d-95787825c7f6.png)
+![4-login](https://user-images.githubusercontent.com/18241226/61409041-4e81a680-a8d9-11e9-8599-b998ef761429.png)
+![5-dashboard-after-login](https://user-images.githubusercontent.com/18241226/61409043-4e81a680-a8d9-11e9-9176-d1b3a8d14635.png)
+![6-nav-after-login](https://user-images.githubusercontent.com/18241226/61409044-4e81a680-a8d9-11e9-866d-ba7f8331fec8.png)
