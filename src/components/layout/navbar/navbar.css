@@ -1,4 +1,4 @@
-.toolbar{
+ .toolbar{
     width: 100%;
     top:0;
     left:0;
@@ -7,29 +7,31 @@
   
     height: 60px;
     z-index:90;
-}
+}  
 
-.toolbar__navigation{
+  .toolbar__navigation{
     display: flex;
     align-items:center;
     height: 100%;
     padding:0 1rem;
-}
+    margin-bottom: 80px
+}  
 
-.toolbar__logo {
+  .toolbar__logo {
  
 margin-left: 1rem;
-}
-.toolbar__logo a{
+}  
+
+  .toolbar__logo a{
 color:#fefefe;
 text-decoration: none;
 font-size: 1.5rem;
-}
-.spacer{
+}  
+  .spacer{
     flex:1;
-}
+} 
 
-.toolbar_navigation-items ul{
+ .toolbar_navigation-items ul{
 list-style:none;
 margin:0;
 padding:0;
@@ -52,7 +54,39 @@ text-transform: uppercase;
 .toolbar_navigation-items a:active{
     background: #fefefe;
    color: #595ad4;
-}
+}   
+
+/* CTA BTN NAV HOME*/
+  .cta-btn{
+    font-weight: 700;
+    font-size: 	0.875rem;
+    line-height: 1.1;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    background:#e80a89;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 	1.25rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;  
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75); 
+   
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }  
+
+ 
+ 
+a.cta-btn:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #595ad4 0%, #e80a89 100%);
+    background-position: 0 100%; 
+  }
+/* END CTA BTN NAV HOME*/
+
 
 .badge{
     order:4;
@@ -62,13 +96,14 @@ text-transform: uppercase;
     background: #595ad4;
     color:#fefefe;
 }
- 
-
 
 .badge:hover{
     color:  #595ad4;
     background: #fefefe;
 }
+
+
+
 .toolbar_navigation-items li:nth-child(1){
     order:4;
 }
@@ -86,7 +121,7 @@ text-transform: uppercase;
 
 
 
-@media(max-width:768px){
+  @media(max-width:768px){
     .toolbar_navigation-items{
         display:none; 
     }
@@ -101,4 +136,4 @@ text-transform: uppercase;
             background: #fefefe;
             color:#595ad4;
         }
-}
+} 

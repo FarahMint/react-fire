@@ -4,7 +4,12 @@ import { BrowserRouter , Switch, Route, Redirect} from 'react-router-dom';
 import Navbar from './components/layout/navbar/Navbar';
 import SideDrawer from "./components/layout/siderDrawer/SideDrawer";
 import  BackDrop from "./components/layout/backdrop/Backdrop";
-import GlobalForm from "./components/layout/globalForm/GlobalForm";
+
+ import GlobalForm from "./components/AuthForm/globalForm/GlobalForm";
+//  import SignIn from "./components/auth/SignIn";
+// import SignUp from "./components/auth/SignUp";
+ 
+import Home from "./components/Home/Home";
 import Dashboard from "./components/dashboard/Dashboard";
 import Notifications from "./components/dashboard/notifications/Notifications";
 import CreateProject from "./components/projects/createProject/CreateProject";
@@ -20,7 +25,7 @@ import {connect}  from "react-redux";
 
 class App extends Component {
  state ={
-    isActive: false,
+    isActive:false,
     sideDrawerOpen: false,
     
  }
@@ -38,15 +43,20 @@ backdropHandler = () =>{
   })
 };
 // ***********SIGN UP/ IN***********
+  handleAuthForm = () =>{
+    this.setState((prevState)=>(
 
-  handleSignForm = ()=>{
-    this.setState((prevState)=>({
-      isActive: !prevState.isActive
-    }))
-  }
+      {isActive: !prevState.isActive}
+    )
+    )
+  };
+
+  
 
 
   render() {
+
+// CONTROL BACKFROP DISPLAY COMPONENT
     let backdrop;
     // console.log(this.props)
     const {auth} = this.props;
@@ -54,52 +64,49 @@ backdropHandler = () =>{
     if(this.state.sideDrawerOpen){
       backdrop =  <BackDrop click={this.backdropHandler}/>;
    }
+// END CONTROL BACKFROP DISPLAY COMPONENT
 
     return (
-     
       <BrowserRouter>
-   
-          <Navbar
+        <Navbar
           toggleNavHandler ={this.toggleNavHandler}
-          sideDrawerOpen = {this.state.sideDrawerOpen} 
-          />
-          <SideDrawer 
-    show = {this.state.sideDrawerOpen} 
-    toggleNavHandler ={this.toggleNavHandler}   /> 
-     {backdrop}
+          show = {this.state.sideDrawerOpen} 
+        />
+        <SideDrawer 
+          show = {this.state.sideDrawerOpen} 
+          toggleNavHandler ={this.toggleNavHandler}/> 
+        {backdrop}
 
-          <div className="app__container">
-          {!auth.uid &&
-          <GlobalForm {...this.state} handleSignForm ={this.handleSignForm }/>}
-           
-          <Switch>
-            
-          
-            {auth.uid && <Route path="/" exact component={Dashboard}></Route>}
+        <>
+       
+        <Switch>
 
+        {!auth.uid && <Route path="/" exact component={Home}></Route>}
 
+      { !auth.uid && <Route exact path="/auth" render={() => 
+          <GlobalForm 
+          {...this.state} 
+           handleAuthForm={this.handleAuthForm} />}
+          />}
+      
 
-            {auth.uid  && <Route path="/notifications" exact component={Notifications}></Route>}
+        {auth.uid && <Route path="/" exact component={Dashboard}></Route>}
+      
 
+        {auth.uid  && <Route path="/notifications" exact component={Notifications}></Route>}
 
-            {auth.uid && <Route path="/create" exact component={CreateProject}></Route>}
-            {auth.uid && <Route path="/update/:id" exact component={UpdateProject}></Route>}
-            <Route path="/project/:id"  exact component={ProjectDetails}></Route>
-            <Route exact path="/signIn" render={() => (
-  auth.uid &&(
-    <Redirect to="/"/>
-  )  
-)}/>
-            <Route exact path="/signUp" render={() => (
-  auth.uid &&(
-    <Redirect to="/"/>
-  )  
-)}/>
-          </Switch>
-          </div>
+        {auth.uid && <Route path="/create" exact component={CreateProject}></Route>}
+        
+        {auth.uid && <Route path="/update/:id" exact component={UpdateProject}></Route>}
+        
+        <Route path="/project/:id"  exact component={ProjectDetails}></Route>
 
-      </BrowserRouter>
-     
+        { auth.uid && <Route exact path="/auth" render={() =>  
+          <Redirect to="/"/> }/>}
+
+        </Switch>
+      </>
+    </BrowserRouter>
     );
   }
 }

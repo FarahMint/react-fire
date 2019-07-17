@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {connect}  from "react-redux";
-import {signIn}  from "../../store/actions/authActions";
+import {signIn}  from "../../../store/actions/authActions";
 
 import {Redirect} from "react-router-dom";
  
@@ -38,22 +38,29 @@ class SignIn extends Component {
       >       
      
 <form onSubmit={this.handleSubmit}>
+  {/* div form center */}
+<div className="form-center">
+ <h1>login</h1>
  <div className="form-group auth">
- <h2>login</h2>
  <label htmlFor="email_login" hidden>email</label>
  <input 
  type="email"  
  id="email_login" 
  name="email"
    placeholder="Enter email"
+   className="form-control" 
    onChange={this.handleChange}
    /> 
+   </div>
+   {/* DIV FORM GROUP */}
+   <div className="form-group auth">
  <label htmlFor="password_login" hidden>password</label>
  <input 
  type="password"
   id="password_login" 
   name="password" 
    placeholder="Enter password"
+   className="form-control" 
    onChange={this.handleChange}
    /> 
  
@@ -64,6 +71,8 @@ class SignIn extends Component {
 (<p>{authError}</p>)
 :(null)
 }</div>
+</div>
+{/* div form center */}
 </form>
  </div>
  

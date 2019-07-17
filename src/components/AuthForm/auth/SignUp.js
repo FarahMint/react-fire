@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Redirect} from "react-router-dom";
 
 import {connect} from "react-redux";
-import {signUp} from "../../store/actions/authActions";
+import {signUp} from "../../../store/actions/authActions";
  
 
  class SignUp extends Component {
@@ -34,6 +34,10 @@ import {signUp} from "../../store/actions/authActions";
       <React.Fragment>
       <div className="form-container sign-up-container">        
 <form onSubmit={this.handleSubmit}>
+ {/* DIV FORM CENTER */}
+<div className="form-center">
+ <h1>register</h1>
+ {/* DIV FORM GROUP */}
  <div className="form-group auth">
   
  <label htmlFor="firstName" hidden>firstName</label>
@@ -41,6 +45,7 @@ import {signUp} from "../../store/actions/authActions";
  type="firstName"  
  id="firstName" 
  name="firstName"
+ className="form-control" 
    placeholder="Enter your first Name"
    onChange={this.handleChange}
    /> 
@@ -49,15 +54,20 @@ import {signUp} from "../../store/actions/authActions";
  type="lastName"  
  id="lastName" 
  name="lastName"
+ className="form-control" 
    placeholder="Enter your last Name"
    onChange={this.handleChange}
    /> 
+   </div>
+    {/* DIV FORM GROUP */}
+ <div className="form-group auth">
  <label htmlFor="email_register" hidden>email</label>
  <input 
  type="email"  
  id="email_register" 
  name="email"
    placeholder="Enter email"
+   className="form-control" 
    onChange={this.handleChange}
    /> 
  <label htmlFor="password_register" hidden>password</label>
@@ -66,6 +76,7 @@ import {signUp} from "../../store/actions/authActions";
   id="password_register" 
   name="password" 
    placeholder="Enter password"
+   className="form-control" 
    onChange={this.handleChange}
    /> 
  
@@ -78,6 +89,8 @@ import {signUp} from "../../store/actions/authActions";
   : null
   }
       </div>
+      </div>
+       {/*  END DIV FORM CENTER */}
 </form>
  </div>
  </React.Fragment>

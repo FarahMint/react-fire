@@ -56,7 +56,7 @@ import "./updateProject.css"
     const {auth} = this.props;
     if(!auth.uid) return <Redirect to="/signIn"/>
     return (
-         
+<section className="project__form">        
 <form onSubmit={this.handleSubmit}>
  <h2>update your project</h2>
  <div className="form-group create__project">
@@ -89,7 +89,7 @@ import "./updateProject.css"
  </div>
   <button type="submit" className="btn-primary btn__create">Update</button>
 </form>
- 
+ </section>
     )
   }
 }

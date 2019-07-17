@@ -1,7 +1,7 @@
 import React from 'react';
 import "./sideDrawer.css";
 import SigninLink from "../navLinks/SigninLink";
-import  SignoutLinks from "../navLinks/SignoutLinks";
+import  SignoutLink from "../navLinks/SignoutLink";
 import {connect}  from "react-redux";
 import {NavLink} from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const SideDrawer = props =>{
  }
 
 // Display either link when sign in or signout
-  const links = auth.uid ?  <SigninLink profile={profile}/> : <SignoutLinks/>
+  const links = auth.uid ?  <SigninLink profile={profile}/> : <SignoutLink/>
 
     return(
     <nav className={drawerClasses}>      

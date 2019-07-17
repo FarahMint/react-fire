@@ -23,7 +23,7 @@ const SigninLink = (props)=>  {
           </li> 
           
         <li>
-            <NavLink to="/signIn" onClick={props.signOut}>logout</NavLink>
+            <NavLink to="/" onClick={props.signOut}>logout</NavLink>
         </li>
       </React.Fragment>  
     )

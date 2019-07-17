@@ -1,0 +1,15 @@
+
+
+.cta-more{
+    
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.cta-more:hover {
+    background-image: linear-gradient(to right, #25aae1 0%, #4481eb 60%, #3f86ed 100%);
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}

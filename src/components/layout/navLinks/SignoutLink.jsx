@@ -5,12 +5,12 @@ const SignoutLinks =() =>{
   return (
     <React.Fragment>
         <li>
-          <NavLink to="/signUp">register</NavLink>
+          <NavLink to="/auth" className="cta-btn">Get Started</NavLink>
         </li> 
         
-      <li>
-          <NavLink to="/signIn">login</NavLink>
-      </li>
+      {/* <li>
+          <NavLink to="/auth">login</NavLink>
+      </li> */}
       
     </React.Fragment>
   )

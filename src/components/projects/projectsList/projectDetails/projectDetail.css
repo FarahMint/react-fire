@@ -6,11 +6,12 @@
 /* PROJECT DETAILS  */
 
 .card__projDetails{
-   max-width: 800px;
-   width:80%;
-    margin: 0 auto;
-    color: #333;
-    background-color: #fefefe;  
+  max-width: 950px;
+  width: 80%;
+  margin: 0 auto;
+  color: #333;
+  background-color: #fefefe;
+  padding-top: 6rem;
 }
 
 .proj__info{

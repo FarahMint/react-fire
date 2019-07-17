@@ -1,18 +1,10 @@
-form{ 
-    padding: 1.25rem;
-    border-radius:5px;
-    box-shadow: 0 5px 7px rgba(0,0,0, .25), 0 2px 2px rgba(0,0,0,0.22); 
-
-}
-.form-group.create__project h2{
-    color:#333;
-    font-weight: 700;    
-}
+ 
 
 .form-group.create__project{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+    justify-content: center;
     align-items: initial;
     width:100% 
 }
@@ -58,9 +50,7 @@ display:none;
 }
 
 @media (max-width:768px){
-    form{ 
-        box-shadow: none; 
-    }
+  
     form h2{ 
       margin-top: 2rem; 
     }

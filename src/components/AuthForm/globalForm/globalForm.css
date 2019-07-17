@@ -1,0 +1,270 @@
+/* OVERLAY */
+.overlay{
+  background-color: var(--darkPurple);
+  color: var(--mainWhite);
+}
+
+.overlay-container{
+  position:absolute;
+  bottom:50%;
+  left:0; 
+  width:100%;
+  height: 50%;
+  overflow: hidden;
+  transition: transform .6s  ease-in-out;
+  z-index:100;
+ }
+ .overlay{
+  position:relative;
+  left: -100%;
+  height:100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform .6s  ease-in-out;
+ }
+ 
+ .overlay-panel{
+  position: absolute;
+  top:0;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 2px;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  transition: transform .6s  ease-in-out;  
+ }
+ 
+ .overlay-right{  
+  right:0;  
+  -webkit-transition: translateX(0%);  
+  transition: translateX(0%); 
+ }
+ 
+ .overlay-left{  
+  -webkit-transition: translateX(20%);  
+  transition: translateX(20%); 
+ }
+/* END OVERLAY */
+
+/* BUTTON OVERLAY CTA */
+button{ transition:transform 80ms ease-in; }
+
+button.ghost{
+  background: transparent;
+  border-color:var(--mainWhite);
+}
+/* END BUTTON OVERLAY CTA */
+
+
+
+/* BUTTON SIGNUP/ SIGNIN */
+button#sign-in:hover{
+  background-color: var(--mainWhite);
+  color:var(--mainGreen);
+}
+button#sign-up:hover{
+  background-color: var(--mainWhite);
+  color:var(--mainRose);
+}
+.btn-primary:hover{
+  background-color: var(--mainPurple);
+}
+
+/* CONTAINER REGISTER FORM SM SCREEN*/
+
+.globalForm{
+  padding: 5rem 0;
+  position:relative;
+}
+
+.container{
+  background: var(--mainWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  height: 100vh;
+  width:100%;
+  }
+
+
+.form-container{
+position:absolute;
+top:5rem;
+width:80%;
+transition: var(--mainTransition);
+}
+.form-container form{
+width:100%;
+box-shadow: none;
+}
+
+.form-center {
+  display: flex;
+  flex-direction:column;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.form-group {
+  padding: 1rem 0.75rem;
+}
+
+ 
+.form-group .auth{
+  width: 170%;
+}
+
+.form-group h2{
+  color:var(--mainPurple);
+}  
+           
+.form-control {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--mainBlack);
+  border-radius: 0;
+  width: 100%;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+
+.form-control:focus{
+ 
+    border-bottom: 2px solid var(--mainGreen);
+}
+
+.sign-in-container{
+  left:0;
+  top: 55%;
+  width:100%;
+  height:50%;
+  z-index:2;
+}
+
+.sign-up-container{
+  left:0;
+  top: 55%;
+  width:100%;
+  height:50%;
+  z-index:1;
+  opacity:1;
+}
+    
+/* ANIMATION */
+    
+    /*  move sign in to the right */
+    /*  when active target sign-in-container */
+.container.right-panel-active .sign-in-container{
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+/*  move overlay   to the left */
+/*  when active target overlay-container */
+.container.right-panel-active .overlay-container{
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+    
+/*  move signup container over signin container */
+/*    */
+.container.right-panel-active .sign-up-container{
+   -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  opacity:0;
+}
+    
+    
+/*  move overlay back to right */
+/*    */
+.container.right-panel-active .overlay{
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+    
+/* to recenter content txt after class activated */.container.right-panel-active .overlay-left{
+  -webkit-transform: translateX(0%);
+ transform: translateX(0%);
+}
+
+.container.right-panel-active .overlay-right{
+  -webkit-transform: translateX(20%);
+  transform: translateX(20%);
+}
+    
+/* https://www.florin-pop.com/blog/2019/... */
+    
+
+/* Change the direction of the form when the browser window is 700px wide or more */
+@media only screen and (min-width: 700px) { 
+   
+/* CONTAINER */
+.container{
+  border-radius: 10px;  
+  box-shadow: 0 14px 28px rgba(0,0,0, .25), 0 10px 10px rgba(0,0,0,0.22); 
+  width: 90%;;
+  height: 500px;  
+  margin:0 auto;
+}
+  
+/*FORM SIGNUP / SIGNIN  */ 
+.form-container{
+  height: 500px;
+  display: flex;
+  align-items: center;
+} 
+
+.sign-in-container{
+  margin-left: 2rem;
+  width:50%;
+  top: 12%;
+}
+
+.sign-up-container{
+  left:50%;    
+  width:45%;
+  top: 12%;
+}
+  
+/* OVERLAY */ 
+.overlay-container{
+  position:absolute;
+  top:0;
+  left:50%;
+  width: 50%;
+  height: 100%;
+}
+ 
+/* ANIMATION */
+/*  move sign in to the right */
+/*  when active target sign-in-container */
+.container.right-panel-active .sign-in-container{
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+/*  move overlay   to the left */
+/*  when active target overlay-container */
+.container.right-panel-active .overlay-container{
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+/*  move signup container over signin container */
+/*    */
+.container.right-panel-active .sign-up-container{
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  opacity:1;
+}
+}
+  
+  
+  
+   

@@ -3,32 +3,33 @@
 .grid-two{
     display:none;
    }
+      
+.notifications__card {
+   background: rgb(244, 245, 247);
+   padding: 5rem 0;
+   text-align: center;
+}
+
+.notifications__card h3{
+   text-transform: uppercase;
+   margin-bottom: 1rem;
+}
    
    
-   
-   .notifications__card {
-    background: rgb(244, 245, 247)
-   }
-   .notifications__card h3{
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-   }
-   
-   
-   .notifications li {
+.notifications li {
     /* background-color:  rgba(170, 181, 181, 0.4); */
-    background-color:   rgba(89, 90, 212, .4);;
-    color:#333;
-    font-size: .95rem;
-    margin-bottom: .45rem;
-    padding: .75rem;
-    border-radius: 15px;
-   }
+   background-color: rgba(89, 90, 212, .4);;
+   color:#333;
+   font-size: .95rem;
+   margin-bottom: .45rem;
+   padding: .75rem;
+   border-radius: 15px;
+}
    
-   .notifications li > h5{
-     text-transform: capitalize;
-     font-size: 1.5rem; 
-   }
+.notifications li > h5{
+   text-transform: capitalize;
+   font-size: 1.5rem; 
+}
    
    
 

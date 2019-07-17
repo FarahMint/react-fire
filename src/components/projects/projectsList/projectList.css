@@ -2,11 +2,13 @@
 /* PROJECT LIST  */
 
 .project__list-section{
-    display:flex;
-    justify-content:space-around;
+display:flex;
+justify-content:space-around;
    /* justify-content:space-between;   */
-    flex-wrap: wrap;
-   }
-   .project__list-section a{
-    margin-right: .45rem;
-   }
+flex-wrap: wrap;
+}
+
+.project__list-section a{
+ margin-right: .45rem;
+margin-bottom: 3rem;
+}
