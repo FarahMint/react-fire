@@ -40,18 +40,24 @@ app.js
  
  [https://www.loom.com/share/11628c5d8ae4482e939a17c064295e51](url)
  
-LARGE SCREEN LANDING PAGE
+--LARGE SCREEN LANDING PAGE
 ![1-large-screen-landing-page](https://user-images.githubusercontent.com/18241226/61409037-4d507980-a8d9-11e9-8ace-47f28f0487e0.png)
 
- MOBILE SCREENSHOT LANDING PAGE
+
+
+--MOBILE SCREENSHOT LANDING PAGE
 ![2-mobile-landing-page](https://user-images.githubusercontent.com/18241226/61409039-4de91000-a8d9-11e9-9f8c-27d545d8a4c2.png)
 
- MOBILE  NAV 
+
+--MOBILE  NAV 
 ![3-mobile-nav-not-auth-yet](https://user-images.githubusercontent.com/18241226/61409040-4de91000-a8d9-11e9-875d-95787825c7f6.png)
 
- MOBILE LOGIN
+
+--MOBILE LOGIN
 ![4-login](https://user-images.githubusercontent.com/18241226/61409041-4e81a680-a8d9-11e9-8599-b998ef761429.png)
 
- NOTIFICATIONS SCREENSHOT  
+
+
+--NOTIFICATIONS SCREENSHOT  
 ![notif-modif ui](https://user-images.githubusercontent.com/18241226/61485718-c1525680-a999-11e9-9597-75ea751ed118.png)
 
