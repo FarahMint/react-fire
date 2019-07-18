@@ -24,10 +24,14 @@ const ProjectDetails= (props)=>{
     props.history.push("/");
  }
  
+
   if(project){
     return(
     <div className="card__projDetails">
-      <h5>{project.title} - </h5>
+      <div className="proj-title">
+      <h5>{project.title}</h5>
+      </div>
+
     <div className="proj__info">
           <p>{project.content}</p>
           { project.picture &&

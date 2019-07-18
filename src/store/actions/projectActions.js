@@ -3,7 +3,7 @@ import {
     CREATE_PROJECT_ERROR,
     GET_ALL_PROJECTS,
     GET_ALL_PROJECTS_ERROR ,
-    GET_PROJECT, 
+     GET_PROJECT, 
     GET_PROJECT_ERROR, 
     UPDATE_PROJECT, 
     UPDATE_ERROR, 
@@ -101,7 +101,7 @@ export const getAllProjects = ( )=>{
 
     }
 }
-
+ 
 
 // GET A PROJECT
 export const getProjectDetails = (id)=>{

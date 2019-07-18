@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 import ProjectSummary from "./projectSummary/ProjectSummary";
 import {Link} from 'react-router-dom';
 
-import "./projectList.css";
 const ProjectList =({projects,auth})=> {
   return (
-      <div className="project__list-section">
+      <>
   { /*{we have project we can map*/}
    { projects && projects.map(project =>{
      return(  
@@ -14,7 +13,7 @@ const ProjectList =({projects,auth})=> {
       </Link>
      )
    })}
-    </div>
+    </>
   )
 }
 

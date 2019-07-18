@@ -6,13 +6,16 @@ import "./projectSummary.css";
 
 const ProjectSummary =({project, auth }) => {
   return (
-    <div className="project__summary">
+    <article className="project__summary">
   
   <h5>{project.title} </h5>
+  <div className="img-container">
   { project.picture ? 
   (<img src={project.picture} alt={project.title} className="tile"></img>) :
   (<img src={`https://via.placeholder.com/400x300/000000/FFFFFF/?text=${project.title}`} alt={project.title} className="tile"></img>)
 }
+  </div>
+ 
 
   <p>posted by:
  {auth.uid === project.authorId ? (
@@ -29,15 +32,8 @@ const ProjectSummary =({project, auth }) => {
 
  </p>
  <p>{moment(project.createdAt.toDate()).calendar()}</p>
-
- {/* working on img upload */}
- {/* { project.imageUrl &&
-<img src={project.imageUrl}  alt={project.title} />
-} */}
-
-  {/* <span>on {moment(project.createdAt.toDate()).calendar()}</span>  */}
   
-</div>
+</article>
     
   )
 }

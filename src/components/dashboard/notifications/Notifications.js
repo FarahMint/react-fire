@@ -1,54 +1,35 @@
 import React from 'react';
 import moment from "moment";
- 
 
-import {connect} from "react-redux"
-// use 2 HOC & chain together
-import {compose} from "redux"
-//HOC with Firestore collection
-import {firestoreConnect} from "react-redux-firebase";
+// import { MdClose} from "react-icons/md";
 
 import "./notifications.css"
 
 const Notifications =({notifications})=> {
  
   return (
-  <div className="notifications__card">
-   
-     {(notifications && notifications.length > 0 ) ?(<h3>current activities</h3>) : <h3>No activit yet</h3>}
-      
-      <ul className="notifications">
- 
+      <div  className="notifications-control">
+          {(notifications && notifications.length > 0 ) ? null : <span>No activit yet</span>}
       {notifications && notifications.map(item =>{
-      return(
-            <li key={item.id}>
-           {/* <h5> {item.user}</h5> */}
-           <h4> {item.content}</h4>
-           <span>by {item.user}</span>
-           <div>
-           {moment(item.time.toDate()).fromNow()}
-           </div>
-            </li>
-      )
-      })}  
-      </ul>  
+        return(
+          <div className="messageBar" key={item.id}>
+            <header className="message-header info">
+              <p>{item.content}  {item.user}</p>
+              
+              {/* I will work on the remove notification */}
+              {/*<MdClose className="close"/> */}
+             
+            </header>
+              <article className="message-body">
+              {moment(item.time.toDate()).fromNow()}
+              </article>
+          </div>     
+        )
+      })}
   </div>
   )
 }
  
-// to be able to display notification in mobile 
-const mapStateToProps= (state)=>{
-  //console.log(state);
-  return{
-    notifications: state.firestore.ordered.notifications
-  }
-}
 
-
-export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([
-{collection:"notifications" , limit:3 ,orderBy: ["time", "desc"]} //-> collection we want to connect to
-])
-)(Notifications);
+export default Notifications;
 

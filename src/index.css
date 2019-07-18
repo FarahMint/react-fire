@@ -98,12 +98,19 @@ input:focus, select:focus,  button:focus{
 
 .toolbar__navigation{
   display: flex;
-  justify-content: space-between;
   align-items:center;
-  max-width: 1170px;
- 
 } 
   
+ /* div surrounding badge position in sm*/
+.toolbar__badge {
+  margin-left: auto;
+  margin-right: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+
 .toolbar__logo a {
   font-size:2.25rem;
   margin-left: 1rem;
@@ -127,16 +134,16 @@ input:focus, select:focus,  button:focus{
   padding:0;
 }
  
- .toggle-button__line{
-     width: 30px;
-     height: 2px;
-     background: var(--mainWhite);
-     transition: var(--mainTransition);
-   
- }
- .toolbar_toogle-button{
-    position: absolute;
-    right: 20px;
+.toggle-button__line{
+  width: 30px;
+  height: 2px;
+  background: var(--mainWhite);
+  transition: var(--mainTransition);
+}
+
+.toolbar_toogle-button{
+  position: absolute;
+  right: 20px;
 }
 
 /* change shape form of hambuger menu to x for close menu*/
@@ -161,7 +168,6 @@ input:focus, select:focus,  button:focus{
 
 /* BADGE INITIAL WHEN LOGGED IN*/
 .badge{
-  order:4;
   border-radius: 50%;
   padding: .45rem;
   text-transform: uppercase;
@@ -175,27 +181,26 @@ input:focus, select:focus,  button:focus{
 }
 /* END  BADGE INITIAL WHEN LOGGED IN*/
 
-/* END  NAVLINKS ORDER WHEN LOGGED IN*/
-.toolbar_navigation-items li:nth-child(1){order:4;}
-.toolbar_navigation-items li:nth-child(2){order:1;}
-.toolbar_navigation-items li:nth-child(3){order:2;}
-.toolbar_navigation-items li:nth-child(4){order:3;}
-/* END  NAVLINKS ORDER WHEN LOGGED IN*/
 
-.toolbar_navigation-items ul{
+
+ 
+ .toolbar_navigation-items{
+   flex:2;
+  } 
+
+ .toolbar_navigation-items ul{
   list-style:none;
-  margin:0;
-  padding:0;
   display: flex; 
-  }
-  
+  align-items: center;
+} 
+ 
 .toolbar_navigation-items li{
   list-style:none;
     padding: 0 .75rem; 
     transition: var(--mainTransition);
 }
   
-.toolbar_navigation-items a{
+.nav-link{
   color:#fefefe;
   text-transform: uppercase;
   padding: 1rem 0;
@@ -205,17 +210,28 @@ input:focus, select:focus,  button:focus{
   font-size: 1rem;
   letter-spacing: var(--mainSpacing);
   }
-  .toolbar_navigation-items a:hover ,
-  .toolbar_navigation-items a:active{
+  .nav-link:hover ,
+  .nav-link:active{
       background: #fefefe;
      color: #595ad4;
      padding-left:1rem;
      padding-right:1rem;
-  }  
+  }    
+.icon-notification{
+  margin: 0 1rem;
+  font-size:2rem;
+  color:var(--mainPurple);
+  cursor: pointer;  
+ }
 
-.nav-links a:hover {
-  color: var(--primaryColor);
+.icon-notification:hover{
+    color:var(--mainPurple);  
 }
+
+/*  NAVLINKS ORDER WHEN LOGGED IN*/
+ 
+/* END  NAVLINKS ORDER WHEN LOGGED IN*/
+
 /* END NAVBAR*/
 
 /* APP CONTAINER */
@@ -351,12 +367,14 @@ a.cta-btn:hover {
 
 }
 
+/* for any screen with width less than 768*/
 @media(max-width:768px){
   .toolbar_navigation-items{
       display:none; 
   }
 }
 
+/* for screen  with greater than 769px*/
 @media(min-width:769px){
   .toolbar_toogle-button{
       display:none; 
@@ -367,6 +385,18 @@ a.cta-btn:hover {
   .badge{
     background: #fefefe;
     color:#595ad4;
+    order:4;
+  }
+
+    /*  target 1rst nav item */
+.toolbar_navigation-items li:nth-child(1){
+  margin-left: auto;
+  }
+ 
+
+  /*  target logout nav li */
+.toolbar_navigation-items li:nth-child(3){
+    margin-left: auto;
   }
 }
 

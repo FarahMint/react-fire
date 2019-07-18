@@ -131,7 +131,7 @@ box-shadow: none;
   width: 100%;
   font-size: 16px;
   margin: 0 0 8px 0;
-  padding: 0;
+  padding: 1rem;
 }
 
 .form-control:focus{

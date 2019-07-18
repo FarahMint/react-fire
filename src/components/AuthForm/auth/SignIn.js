@@ -10,9 +10,11 @@ import {Redirect} from "react-router-dom";
 class SignIn extends Component {
     state={
         email:"",
-        password:""
+        password:"",
     }
 
+ 
+   
    handleChange=(e)=>{
         this.setState({
            [e.target.name] : e.target.value,
@@ -26,12 +28,15 @@ class SignIn extends Component {
      this.props.signIn(this.state);
 
     }
+
   render() {
  
-    const { authError, auth} =this.props;
+   const {
+      authError,
+     auth} =this.props;
+  
     if(auth.uid) return <Redirect to="/"/>
  
-   
     return (
     <React.Fragment> 
       <div className="form-container sign-in-container"
@@ -67,10 +72,9 @@ class SignIn extends Component {
  </div>
    
   <button type="submit" className="btn-primary">Sign in</button>
-<div className="text-danger text-center">{ authError ? 
-(<p>{authError}</p>)
-:(null)
-}</div>
+  <div className="text-danger text-center">
+  { authError ? (<p>{authError}</p>):(null)}
+  </div>
 </div>
 {/* div form center */}
 </form>

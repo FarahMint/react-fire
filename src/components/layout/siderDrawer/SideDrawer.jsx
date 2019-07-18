@@ -3,7 +3,6 @@ import "./sideDrawer.css";
 import SigninLink from "../navLinks/SigninLink";
 import  SignoutLink from "../navLinks/SignoutLink";
 import {connect}  from "react-redux";
-import {NavLink} from 'react-router-dom';
 
 
 const SideDrawer = props =>{
@@ -23,9 +22,6 @@ const SideDrawer = props =>{
     <nav className={drawerClasses}>      
         <ul onClick={ toggleNavHandler }>
         {links}
-        {/* Add notification for mobile view */}
-        { auth.uid && <li><NavLink to="/notifications">notifications
-          </NavLink></li>}
         </ul>
     </nav>
     )   

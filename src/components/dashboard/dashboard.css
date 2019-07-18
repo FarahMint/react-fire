@@ -1,40 +1,29 @@
-
-/* DASHBOARD */
+/* DASHBOARD MAIN SECTION*/
 .dashboard{
-  width: 90%;
-  display: grid;
-  grid-template-columns:  1fr;
-  grid-gap:2rem;
-  margin: 0 auto;  
-    
   padding: 5rem 0;
+}
+
+/* TITLE*/
+.title{
   text-align: center;
-  
+  margin: 5rem 0;
 }
 
-.grid-one{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;  
+/* PROJECTS LIST*/
+.featured__projects-center{
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
 }
-
 
 /* Change the direction of the form when the browser window is 700px wide or more */
 @media only screen and (min-width: 769px) { 
-
-.dashboard{
-    grid-template-columns: 3fr 1fr;
-}
-
-p{
-  line-height: 2rem;
-}
-   
-  
-/* DASHBOARD NOTIF */
-.grid-two{
-  display: flex;
-  justify-content: center;  
-  text-align: center;
-}
+  .featured__projects-center{
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+  }
+ 
 }

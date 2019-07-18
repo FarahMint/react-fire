@@ -1,19 +1,4 @@
 
-/* PROJECT SUMMARY  */
-
-
-     /* LIST SUMMARY */
-     .card-body{
-        border: 1px solid #777;
-     border-radius: 25px;
-     margin-bottom: .45rem;
-     padding:0 1rem 1rem;
-     display: flex;
-     flex-direction: column;
-     
-    }
-  
-
 .project__summary{
     color:var(--mainBlack);
     background-color:  var(--mainWhite);
@@ -29,9 +14,20 @@
   -webkit-transform: scale(1.05);
           transform: scale(1.05)
   }
+
+.img-container{
+ position:relative;
+}
+
+.img-container img {
+width: 100%;
+display: block;
+overflow: hidden;
+/* width:18rem; */
+height:10rem;
+}
   
-  
-  .project__summary h5{
+.project__summary h5{
   font-weight: 700;
   padding:.5rem;
   text-transform: uppercase;
@@ -39,28 +35,20 @@
   background:#595ad4;
   }
 
-  .project__summary p{
-        padding: .75rem;
-        }
+.project__summary p{
+ padding: .75rem;
+}
    
-  .project__summary span{
-   font-weight: 100;
-   line-height: .95rem;
-   padding: .75rem;
-  }
-  .project__summary img{
-  width:18rem;
-  height:10rem;
-  }
-
-
+.project__summary span{
+  font-weight: 100;
+  line-height: .95rem;
+  padding: .75rem;
+}
 
   /* Change the direction of the form when the browser window is 700px wide or more */
 @media only screen and (min-width: 700px) { 
-      /* PROJECT SUMMARY */
-      .project__summary h5{
-        padding:1rem;
-        }
-      
-     
-      }
+/* PROJECT SUMMARY */
+.project__summary h5{
+padding:1rem;
+}
+}

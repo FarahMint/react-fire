@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter , Switch, Route, Redirect} from 'react-router-dom';
 
+
+/**COMPONENTS */
 import Navbar from './components/layout/navbar/Navbar';
 import SideDrawer from "./components/layout/siderDrawer/SideDrawer";
 import  BackDrop from "./components/layout/backdrop/Backdrop";
-
- import GlobalForm from "./components/AuthForm/globalForm/GlobalForm";
-//  import SignIn from "./components/auth/SignIn";
-// import SignUp from "./components/auth/SignUp";
- 
+import GlobalForm from "./components/AuthForm/globalForm/GlobalForm";
 import Home from "./components/Home/Home";
 import Dashboard from "./components/dashboard/Dashboard";
-import Notifications from "./components/dashboard/notifications/Notifications";
+
 import CreateProject from "./components/projects/createProject/CreateProject";
 import UpdateProject from "./components/projects/updateProject/UpdateProject";
 import ProjectDetails from "./components/projects/projectsList/projectDetails/ProjectDetails";
@@ -19,7 +17,7 @@ import ProjectDetails from "./components/projects/projectsList/projectDetails/Pr
 
 
 
-// connect to redux state
+//CONNECT TO REDUX STORE
 // access firebase prop on state to see whether user login
 import {connect}  from "react-redux";
 
@@ -52,8 +50,6 @@ backdropHandler = () =>{
   };
 
   
-
-
   render() {
 
 // CONTROL BACKFROP DISPLAY COMPONENT
@@ -76,31 +72,31 @@ backdropHandler = () =>{
           show = {this.state.sideDrawerOpen} 
           toggleNavHandler ={this.toggleNavHandler}/> 
         {backdrop}
-
-        <>
-       
+        <> 
         <Switch>
-
+          {/* ROUTE LANDING PAGE WHEN NO LOGGED IN */}
         {!auth.uid && <Route path="/" exact component={Home}></Route>}
 
-      { !auth.uid && <Route exact path="/auth" render={() => 
+         {/* ROUTE AUTH PAGE FOR LOGIN/SIGNUP */}
+         {!auth.uid && <Route exact path="/auth" render={() => 
           <GlobalForm 
           {...this.state} 
            handleAuthForm={this.handleAuthForm} />}
           />}
       
-
+        {/* ROUTE HOME PAGE WHEN LOGGED IN */}
         {auth.uid && <Route path="/" exact component={Dashboard}></Route>}
-      
 
-        {auth.uid  && <Route path="/notifications" exact component={Notifications}></Route>}
-
+          {/* ROUTE CREATE PAGE  */}
         {auth.uid && <Route path="/create" exact component={CreateProject}></Route>}
         
+         {/* ROUTE UPDATE PAGE FOR SPECIFIC PROJECT  */}
         {auth.uid && <Route path="/update/:id" exact component={UpdateProject}></Route>}
         
+         {/* ROUTE PROJECT PAGE FOR SPECIFIC PROJECT  */}
         <Route path="/project/:id"  exact component={ProjectDetails}></Route>
 
+           {/* REDIRECT WHEN SIGNUP/LOGIN TO HOME PAGE */}
         { auth.uid && <Route exact path="/auth" render={() =>  
           <Redirect to="/"/> }/>}
 

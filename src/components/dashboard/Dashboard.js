@@ -1,6 +1,7 @@
 import React from 'react'
-import Notifications from "./notifications/Notifications"
+ 
 import ProjectList from "../projects/projectsList/ProjectList";
+//  import PersonalProject from "../projects/personalProject/personalProject";
 
 import {connect} from "react-redux"
 // use 2 HOC & chain together
@@ -12,26 +13,23 @@ import {Redirect} from "react-router-dom";
 
 import "./dashboard.css";
 
-  const Dashboard =({projects, auth, notifications})=> {
+  const Dashboard =({projects, auth})=> {
    if (!auth.uid)return <Redirect to="/signIn"/>
     return (
       <div className="dashboard">
       
-        <div className="grid-one">
-      {(projects &&  projects.length > 0) ?
-       (<h2>Current project.</h2>) : 
-      (<h2>Start creating project.</h2>)}
+      <div className="title">
+        {(projects &&  projects.length > 0) ?
+        (<h2>Current project.</h2>) : 
+        (<h2>Start creating project.</h2>)}
+      </div>
 
-
+        <div className="featured__projects-center">
         <ProjectList  projects={projects} auth={auth}/>
+        {/* <PersonalProject  projects={projects} auth={auth}/> */}
+
         </div>
-        
-        <div className="grid-two">
-        {notifications && notifications.length > 0 && <Notifications notifications={notifications}/>}
-      
-            </div>
-        
-        </div>
+      </div>
      
     )
   }
@@ -42,9 +40,7 @@ const mapStateToProps= (state)=>{
   //console.log(state);
   return{
     projects:state.firestore.ordered.projects,
-    auth:state.firebase.auth,
-    notifications: state.firestore.ordered.notifications,
-    
+    auth:state.firebase.auth
   }
 }
 

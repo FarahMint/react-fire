@@ -1,45 +1,55 @@
-/* NOTIFICATIONS */
 
-.grid-two{
-    display:none;
-   }
-      
-.notifications__card {
-   background: rgb(244, 245, 247);
-   padding: 5rem 0;
-   text-align: center;
+
+.notifications-control {
+   background-color: #dcdde0;
+   display: inline-block;
+   padding: 10px;
+   height: auto;
+   max-height: 700px;
+   overflow-y: scroll;
+   position: absolute;
+   right: 0;
+   top: 74px;
 }
 
-.notifications__card h3{
-   text-transform: uppercase;
-   margin-bottom: 1rem;
+.messageBar {
+   position:relative;
+   width: 240px;
+   border-radius: 4px;
+   margin-bottom: 10px;
+   overflow: hidden;
+   padding: 8px;
+   background-color: #fff;
+   animation: barFadeIn 4s ease-in-out;
+   transform-origin: top;
 }
-   
-   
-.notifications li {
-    /* background-color:  rgba(170, 181, 181, 0.4); */
-   background-color: rgba(89, 90, 212, .4);;
-   color:#333;
-   font-size: .95rem;
-   margin-bottom: .45rem;
-   padding: .75rem;
-   border-radius: 15px;
-}
-   
-.notifications li > h5{
-   text-transform: capitalize;
-   font-size: 1.5rem; 
-}
-   
-   
 
-   /* Change the notification display @   769px wide or more */
-@media only screen and (min-width: 769px) { 
- 
 
-.notifications li{ 
- font-size:.95rem;
- margin-bottom: .35rem;
- padding: .95rem;
+.messageBar .message-header.info>p {
+   border-color:  var(--mainGrey);
+   color: var(--mainPurple);
 }
+
+.messageBar .message-header>p {
+   border: 1px var(--mainGrey);
+   border-radius: 9px;
+   display: inline-block;
+   margin: 0;
+   font-weight: 7200;
+   padding:.25rem;
+}
+
+.close {
+   position:absolute;
+   top:0;
+   right:0;
+   font-size: 1rem;
+   cursor: pointer;
+   color: grey;
+}
+
+.messageBar>article {
+   padding-left: 2px;
+   margin-top: 10px;
+   color: #898989;
 }

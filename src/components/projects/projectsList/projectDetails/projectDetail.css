@@ -1,10 +1,6 @@
 
-
-.app__container .card__projDetails {
-  height: fit-content;
-}
 /* PROJECT DETAILS  */
-
+ 
 .card__projDetails{
   max-width: 950px;
   width: 80%;
@@ -12,6 +8,11 @@
   color: #333;
   background-color: #fefefe;
   padding-top: 6rem;
+}
+
+.card__projDetails >.proj-title{
+  text-align: center;
+  margin-top: 5rem;
 }
 
 .proj__info{
@@ -95,5 +96,9 @@ color: #ff4b2b;
 @media (max-width:768px){
   .proj__info{
     grid-template-columns: 1fr;
+  }
+
+  .title{
+    margin: 1rem 0;
   }
 }
