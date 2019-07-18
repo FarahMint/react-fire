@@ -272,10 +272,10 @@ input:focus, select:focus,  button:focus{
 .cta-more:hover {
   background-image: linear-gradient(to right, #25aae1 0%, #4481eb 60%, #3f86ed 100%);
   background-position: 100% 0;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -moz-transition: var(--mainTransition);
+  -o-transition: var(--mainTransition);
+  -webkit-transition: var(--mainTransition);
+  transition: var(--mainTransition);
 }
 /* END SHOWCASE */
 
@@ -339,24 +339,16 @@ button{
 
   /* CTA BTN NAV HOME*/
 .cta-btn{
-    font-weight: 700;
-    font-size: 	0.875rem;
-    line-height: 1.1;
-    padding: 0 1rem;
+    padding: 1rem;
     border-radius: 5px;
     color: #fff;
     background:#e80a89;
-    text-align: center;
-    text-decoration: none;
-    margin: 0 0 	1.25rem;
-    letter-spacing: 1px;
     text-transform: uppercase;  
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75); 
-   
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    -moz-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    transition: var(--mainTransition);
   }
 a.cta-btn:hover {
     color: #fff;
