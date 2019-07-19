@@ -3,6 +3,7 @@ import ProjectSummary from "./projectSummary/ProjectSummary";
 import {Link} from 'react-router-dom';
 
 const ProjectList =({projects,auth})=> {
+  
   return (
       <>
   { /*{we have project we can map*/}
@@ -11,8 +12,13 @@ const ProjectList =({projects,auth})=> {
        <Link to={`/project/${project.id}`}key={project.id}>
       <ProjectSummary project={project}  auth={auth}/>
       </Link>
+
+
      )
    })}
+
+    
+    
     </>
   )
 }

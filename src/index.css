@@ -265,6 +265,7 @@ input:focus, select:focus,  button:focus{
 }
 
 .cta-more{ 
+  background-color:#0d91ca;
   margin-top:2rem; 
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
@@ -279,6 +280,49 @@ input:focus, select:focus,  button:focus{
 }
 /* END SHOWCASE */
 
+/* LOGIN/SIGNUP FORM */
+
+.form-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 60px;
+
+}
+.form-container > form{
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-group.auth{
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.form-control{
+  color: #414141;
+  font-size: 17px;
+  height: 46px;
+  text-indent: 16px;
+  width: 100%;
+  background-color: #ededed;
+  border: none!important;
+}
+
+/* alert msg when sign */
+.text-danger{
+  text-align: center;
+  margin-bottom: 1.75rem;
+  color: rgba(226,13,65,.8);
+  transition: var(--mainTransition);
+}
+ 
+
+/* END LOGIN/SIGNUP FORM */
 
 /* PROJECT FORMS*/
 .project__form{
@@ -299,7 +343,7 @@ input:focus, select:focus,  button:focus{
 }
 
 
-button{
+/* button{
  border-radius:20px;
  background: #0d91ca;
  color: var(--mainWhite);
@@ -309,21 +353,30 @@ button{
  letter-spacing:1px;
  cursor:pointer;
   text-transform:uppercase; 
+} */
+
+button{
+
+ font-size: 1rem;
+ padding:12px 45px;
+ letter-spacing:1px;
+ cursor:pointer;
+  text-transform:uppercase; 
 }
 
 .btn-primary{
-  width: 15rem;
-  margin: 0 auto
-}
-
-
-/* alert msg when sign */
-.text-danger.text-center{
-  margin-top: 1rem;
-  background-color: #595ad4;
-  color: var(--mainWhite);
+  padding: 11px;
   width: 100%;
+  /* max-width: 300px; */
+  font-weight: 700;
+
+  background: #6c5ce7;
+  box-shadow: unset;
+  color: #fff;
 }
+
+
+
 /* MEDIA QUERY */
 
 /* Change the direction of the form when the browser window is 700px wide or more */

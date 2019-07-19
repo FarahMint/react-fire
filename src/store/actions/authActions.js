@@ -11,12 +11,9 @@ return (dispatch, getState, {getFirebase, getFirestore}) =>{
     ).then(()=>{
         dispatch({type:"LOGIN_SUCCESS"})
     }).catch(err =>{ 
-       
-      dispatch({type:"LOGIN_ERROR", err})
-     
-    })
+      dispatch({type:"LOGIN_ERROR", err}); 
+        })
     }
-
 }
 
 
@@ -59,3 +56,5 @@ return (dispatch, getState, {getFirebase, getFirestore})=>{
     })
 }
 }
+
+  

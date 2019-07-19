@@ -25,6 +25,7 @@ display: block;
 overflow: hidden;
 /* width:18rem; */
 height:10rem;
+object-fit: cover;
 }
   
 .project__summary h5{

@@ -1,50 +1,17 @@
-import React
-//  , { useState}
- from 'react';
-// import { Link } from 'react-router-dom';
-import { FaGrinBeam , FaGrinStars} from "react-icons/fa";
+import React  from 'react';
+ 
 
-const Overlay=(props) => {
-  // const [isActive, setActive]= useState(false);
+const Overlay=({isActive, handleAuthForm}) => (
+    <div className='tab__auth'> 
+      { isActive && <> <span>Already have an account </span> <button 
+          type="button"
+          onClick={handleAuthForm}> login</button></>}
 
-
-  return(
-    
-<div className=
-{props.isActive ?"container right-panel-active": "container"}
->
-  <div className="overlay-container">
-          {/* overlay*/}
-    <div className="overlay">
-      <div className="overlay-panel overlay-left">
-        <h1>Welcome Back <FaGrinStars/> </h1>
-        <p>To keep connected with us please login.</p>
-        {/* <Link to="/login"> */}
-          <button className="ghost" id="sign-in" 
-           onClick={props.handleAuthForm}>sign in</button> 
-        {/* </Link>       */}
-      </div>
-      {/* end overlay-left */}
-
-      <div className="overlay-panel overlay-right">
-        <h1>Hello Friend  <FaGrinBeam/></h1>
-        <p>Enter your email and start your journey.</p>
-        {/* <Link to="/register"> */}
-          <button className="ghost" id="sign-up" 
-           onClick={props.handleAuthForm}>sign up</button> 
-        {/* </Link>         */}
-      </div>
-      {/* end overlay-right */}
+      { !isActive && <> <span>Don't have an account yet </span>
+      <button 
+          type="button"
+          onClick={handleAuthForm}> register</button></>}
     </div>
-      {/* end overlay*/}
-  </div>
-
-
-</div>
-  
-
-
   );
-}
 
 export default  Overlay;

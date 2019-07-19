@@ -14,6 +14,9 @@ import {Redirect} from "react-router-dom";
 import "./dashboard.css";
 
   const Dashboard =({projects, auth})=> {
+    // const personalProj = projects && projects.filter(project => auth.uid === project.authorId );
+    // console.log(personalProj);
+    
    if (!auth.uid)return <Redirect to="/signIn"/>
     return (
       <div className="dashboard">

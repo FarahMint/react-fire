@@ -13,6 +13,9 @@ import Dashboard from "./components/dashboard/Dashboard";
 import CreateProject from "./components/projects/createProject/CreateProject";
 import UpdateProject from "./components/projects/updateProject/UpdateProject";
 import ProjectDetails from "./components/projects/projectsList/projectDetails/ProjectDetails";
+
+import ProjectSummary from "./components/projects/projectsList/projectSummary/ProjectSummary";
+import  Error from "./components/Error/Error";
  
 
 
@@ -96,9 +99,16 @@ backdropHandler = () =>{
          {/* ROUTE PROJECT PAGE FOR SPECIFIC PROJECT  */}
         <Route path="/project/:id"  exact component={ProjectDetails}></Route>
 
+         {/* ROUTE PROJECT PAGE FOR SPECIFIC PROJECT  */}
+        <Route path="/project/:uid"  exact component={ProjectSummary}></Route>
+
            {/* REDIRECT WHEN SIGNUP/LOGIN TO HOME PAGE */}
         { auth.uid && <Route exact path="/auth" render={() =>  
           <Redirect to="/"/> }/>}
+
+          {/* ERROR  - when no match*/}
+        
+          <Route component={Error}></Route>
 
         </Switch>
       </>
