@@ -21,9 +21,13 @@ A quick look at the top-level files and directories you'll see in my React proje
 
 FOLDER STRUCTURE
 ( ROOT )
-index.js
-app.js
-    components
+
+--- index.js
+
+--- app.js
+
+    --- components
+
         --- AuthForm
             --auth
             --globalForm
@@ -66,13 +70,13 @@ app.js
 ![Screen Shot 2019-07-23 at 9 59 18 PM](https://user-images.githubusercontent.com/18241226/61749862-bc2b4800-ad9b-11e9-9c6f-9dd432db1553.png)
 
 
-3.  **`Dashboard -tabs menu- user with personal projects`** 
+3.  **`Dashboard - tabs menu - user with no personal project yet`** 
 
 ![Screen Shot 2019-07-23 at 9 59 36 PM](https://user-images.githubusercontent.com/18241226/61749851-b6cdfd80-ad9b-11e9-82cf-1a37cc54419b.png)
 
 
 
-4.  **`Dashboard - tabs menu - user with no personal project yet`** 
+4.  **`Dashboard -tabs menu- user with personal projects`** 
 
 ![Screen Shot 2019-07-23 at 10 00 05 PM](https://user-images.githubusercontent.com/18241226/61749840-b170b300-ad9b-11e9-8605-0517c798affd.png)
 
@@ -83,10 +87,12 @@ app.js
 
 
 6.  **`mobile login`** 
+
 ![4-login](https://user-images.githubusercontent.com/18241226/61409041-4e81a680-a8d9-11e9-8599-b998ef761429.png)
 
 
 7.  **`Notifications`** 
+
 ![notif-modif ui](https://user-images.githubusercontent.com/18241226/61485718-c1525680-a999-11e9-9597-75ea751ed118.png)
 
 
