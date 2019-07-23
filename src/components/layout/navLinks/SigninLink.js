@@ -11,7 +11,7 @@ import { FaPlus} from "react-icons/fa";
  
 
 const SigninLink = (props)=>  {
-  
+ 
     return ( 
     <React.Fragment>  
           <li>
@@ -22,7 +22,7 @@ const SigninLink = (props)=>  {
 
           <li>
             <NavLink to="/" className="nav-link">Dashboard</NavLink>
-          </li>    
+          </li>  
           <li>
             <NavLink to="/" onClick={props.signOut}
             className="nav-link">logout</NavLink>

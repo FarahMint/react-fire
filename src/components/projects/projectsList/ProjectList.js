@@ -11,14 +11,9 @@ const ProjectList =({projects,auth})=> {
      return(  
        <Link to={`/project/${project.id}`}key={project.id}>
       <ProjectSummary project={project}  auth={auth}/>
-      </Link>
-
-
-     )
-   })}
-
-    
-    
+      </Link>)
+    })
+  } 
     </>
   )
 }

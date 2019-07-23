@@ -1,39 +1,47 @@
-import React from 'react'
- 
-import ProjectList from "../projects/projectsList/ProjectList";
-//  import PersonalProject from "../projects/personalProject/personalProject";
+import React from 'react';
+import {Redirect} from "react-router-dom";
 
+/**COMPONENTS */
+import Tabs from './Tabs';
+import ProjectList from "../projects/projectsList/ProjectList";
+import PersonalProject from "./PersonalProject";
+
+/**REDUX */
 import {connect} from "react-redux"
 // use 2 HOC & chain together
 import {compose} from "redux"
 //HOC with Firestore collection
 import {firestoreConnect} from "react-redux-firebase";
 
-import {Redirect} from "react-router-dom";
-
+/**CSS */
 import "./dashboard.css";
 
   const Dashboard =({projects, auth})=> {
-    // const personalProj = projects && projects.filter(project => auth.uid === project.authorId );
-    // console.log(personalProj);
-    
+    /**get all presonal projects */
+  const personalProj = projects && projects.filter(project => auth.uid === project.authorId );
+
    if (!auth.uid)return <Redirect to="/signIn"/>
+
     return (
       <div className="dashboard">
       
-      <div className="title">
-        {(projects &&  projects.length > 0) ?
-        (<h2>Current project.</h2>) : 
-        (<h2>Start creating project.</h2>)}
-      </div>
-
-        <div className="featured__projects-center">
-        <ProjectList  projects={projects} auth={auth}/>
-        {/* <PersonalProject  projects={projects} auth={auth}/> */}
-
+        <div className="title">
+          {(projects &&  projects.length > 0) ?
+          (<h2>Current project.</h2>) : 
+          (<h2>Start creating project.</h2>)}
         </div>
+
+      
+        <Tabs>
+          <div label="all projects">
+              <ProjectList  projects={projects} auth={auth} /> 
+          </div>
+          
+          <div label="your personal project">
+            <PersonalProject  projects={personalProj} auth={auth} />   
+          </div>
+        </Tabs>
       </div>
-     
     )
   }
  

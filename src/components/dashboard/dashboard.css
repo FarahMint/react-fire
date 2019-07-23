@@ -27,3 +27,31 @@
   }
  
 }
+
+/* tabs container */
+
+.tabs .container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* each individual tab div */
+.tabs .container>div {
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+  color: #000;
+
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+.tab-item-active {
+  background-color: var(--mainPurple);
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}

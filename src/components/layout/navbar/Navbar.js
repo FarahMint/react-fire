@@ -25,7 +25,7 @@ const Navbar = (props) => {
  
   /** LINKS ACCORDING TO LOGIN STATUS*/
   const links = auth.uid ?  <SigninLink 
-  profile={profile} 
+  profile={profile}
   notifications={notifications}/> : <SignoutLink />
 
   return ( 

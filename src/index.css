@@ -72,7 +72,7 @@ button{
   cursor: pointer;
 }
 
-input:focus, select:focus,  button:focus{
+input:focus, select:focus, textarea:focus, button:focus{
   outline: none;
 }
 
@@ -132,6 +132,7 @@ input:focus, select:focus,  button:focus{
   background: transparent;
   border: none;
   padding:0;
+
 }
  
 .toggle-button__line{
@@ -144,6 +145,7 @@ input:focus, select:focus,  button:focus{
 .toolbar_toogle-button{
   position: absolute;
   right: 20px;
+ 
 }
 
 /* change shape form of hambuger menu to x for close menu*/
@@ -241,17 +243,27 @@ input:focus, select:focus,  button:focus{
 .homePage {
   padding: 5rem 0;
   text-align: center;
+height: 100vh;
+background-color: #ff0000;
+background-image: url("./images/Quantum-Gradient.svg");
+background-attachment: fixed;
+background-size: cover;
+color:#fefefe;
 }
 
 .banner-center{
-  width: 80vw;
+  width: 90vw;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr ;
+  grid-gap:2rem;
+  align-items: center;
   margin: 2rem auto;
+}
+.banner-center-img img{
+  width: 100%;
 }
 
 .banner h1 {
-  font-family: gotham ssm a,gotham ssm b,sans-serif;
   font-size: 3rem;
   font-weight: 200;
   line-height: .75rem;
@@ -268,6 +280,8 @@ input:focus, select:focus,  button:focus{
   background-color:#0d91ca;
   margin-top:2rem; 
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  border:none;
+
 }
 
 .cta-more:hover {
@@ -307,10 +321,15 @@ input:focus, select:focus,  button:focus{
   color: #414141;
   font-size: 17px;
   height: 46px;
+  margin-bottom: .5rem;
   text-indent: 16px;
   width: 100%;
   background-color: #ededed;
   border: none!important;
+}
+textarea.form-control{
+  height: 100%;
+   
 }
 
 /* alert msg when sign */
@@ -442,6 +461,11 @@ a.cta-btn:hover {
   /*  target logout nav li */
 .toolbar_navigation-items li:nth-child(3){
     margin-left: auto;
+  }
+
+  /* showcase banner-center */
+  .banner-center{
+    grid-template-columns: 1fr 1fr;
   }
 }
 
