@@ -87,13 +87,17 @@ FOLDER STRUCTURE
 
 
 
+
 3.  **`Mobile & Tablet Dashboard - after sign in`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244263-f49fd700-b3d6-11e9-8162-6cf65b396a66.png" alt="3_mobile-dashboard-after-signin" title="3_mobile-dashboard-after-signin"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244264-f49fd700-b3d6-11e9-9cbe-a63a891096b4.png" alt="3_tablet-dashboard-after-signin" title="3_tablet-dashboard-after-signin"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+
+
  
+
 
 
 
@@ -105,9 +109,12 @@ FOLDER STRUCTURE
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244266-f49fd700-b3d6-11e9-96fd-9f008591d20c.png" alt="4_tablet-dashboard-personel-project" title="4_tablet-dashboard-personel-project"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
- 
+
+
 
  
+
+
 
 
 
@@ -118,7 +125,11 @@ FOLDER STRUCTURE
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+
+
  
+
+
 
 
 6.  **`Mobile & Tablet user select personel project that was created`** 
@@ -140,6 +151,9 @@ FOLDER STRUCTURE
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+
+
+ 
 
 
 
