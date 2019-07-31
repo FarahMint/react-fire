@@ -76,8 +76,7 @@ FOLDER STRUCTURE
 2.  **`Mobile & Tablet sign in page`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244261-f4074080-b3d6-11e9-94a4-5abb9f8306ea.png" alt="2_mobile-sign-in" title="2_mobile-sign-in"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244262-f4074080-b3d6-11e9-8de7-b7a2b48b666a.png" alt="2_tablet-sign-in" title="2_tablet-sign-in"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
@@ -91,8 +90,7 @@ FOLDER STRUCTURE
 3.  **`Mobile & Tablet Dashboard - after sign in`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244263-f49fd700-b3d6-11e9-8162-6cf65b396a66.png" alt="3_mobile-dashboard-after-signin" title="3_mobile-dashboard-after-signin"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244264-f49fd700-b3d6-11e9-9cbe-a63a891096b4.png" alt="3_tablet-dashboard-after-signin" title="3_tablet-dashboard-after-signin"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
