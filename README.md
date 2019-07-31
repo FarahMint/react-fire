@@ -62,8 +62,7 @@ FOLDER STRUCTURE
 1.  **`Mobile & Tablet Landing page`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244256-f36eaa00-b3d6-11e9-8389-e3c7afa9fa1e.png" alt="1_mobile-landing-page" title="1_mobile-landing-page"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244257-f4074080-b3d6-11e9-90ab-718a533e60a4.png" alt="1_tablet-landing-page" title="1_tablet-landing-page"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
