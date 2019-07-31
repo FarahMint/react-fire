@@ -70,13 +70,20 @@ FOLDER STRUCTURE
 
 
 
+
+
+
 2.  **`Mobile & Tablet sign in page`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244261-f4074080-b3d6-11e9-94a4-5abb9f8306ea.png" alt="2_mobile-sign-in" title="2_mobile-sign-in"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244262-f4074080-b3d6-11e9-8de7-b7a2b48b666a.png" alt="2_tablet-sign-in" title="2_tablet-sign-in"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+
+
  
+
+
 
 
 
@@ -92,6 +99,7 @@ FOLDER STRUCTURE
 
 
 
+
 4.  **`Mobile & Tablet Dashboard -tabs menu- user with personal projects`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244265-f49fd700-b3d6-11e9-8eda-41713e5b95b9.png" alt="4_mobile-dashboard-personel-project" title="4_mobile-dashboard-personel-project"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244266-f49fd700-b3d6-11e9-96fd-9f008591d20c.png" alt="4_tablet-dashboard-personel-project" title="4_tablet-dashboard-personel-project"/>
@@ -100,6 +108,9 @@ FOLDER STRUCTURE
  
 
  
+
+
+
 
 
 5.  **`Mobile nav -- bug on tablet to be fixed`** 
@@ -123,8 +134,6 @@ FOLDER STRUCTURE
 
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 7.  **`Mobile & Tablet user create project action`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244271-f5d10400-b3d6-11e9-8a86-4be24ac52627.png" alt="7_mobile-personel-project-create-feature" title="7_mobile-personel-project-create-feature"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244272-f6699a80-b3d6-11e9-8809-de2b6d0b74df.png" alt="7_tablet-personel-project-create-feature" title="7_tablet-personel-project-create-feature"/>
@@ -136,24 +145,25 @@ FOLDER STRUCTURE
 
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 8.  **`Mobile & Tablet user create project action`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244273-f6699a80-b3d6-11e9-9f47-31652708b47d.png" alt="8_mobile-personel-project-update-feature" title="8_mobile-personel-project-update-feature"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244274-f6699a80-b3d6-11e9-8363-f5c6ec727729.png" alt="8_tablet-personel-project-update-feature" title="8_tablet-personel-project-update-feature"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
- 
 
 
 
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
 9.  **`Mobile & Tablet user create project action`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244275-f6699a80-b3d6-11e9-93fe-209659c767a5.png" alt="9__mobile-notifications-display" title="9__mobile-notifications-display"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244277-f7023100-b3d6-11e9-8ee3-0f3c5f900c93.png" alt="9_tablet-notifications-display" title="9_tablet-notifications-display"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 
 
 
