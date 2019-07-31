@@ -107,8 +107,7 @@ FOLDER STRUCTURE
 4.  **`Mobile & Tablet Dashboard -tabs menu- user with personal projects`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244265-f49fd700-b3d6-11e9-8eda-41713e5b95b9.png" alt="4_mobile-dashboard-personel-project" title="4_mobile-dashboard-personel-project"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244266-f49fd700-b3d6-11e9-96fd-9f008591d20c.png" alt="4_tablet-dashboard-personel-project" title="4_tablet-dashboard-personel-project"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
@@ -135,8 +134,7 @@ FOLDER STRUCTURE
 6.  **`Mobile & Tablet user select personel project that was created`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244269-f5386d80-b3d6-11e9-81e4-e1625b89a2c9.png" alt="6_mobile-personel-project-selected" title="6_mobile-personel-project-selected"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244270-f5386d80-b3d6-11e9-80e5-3bd56c6fc16d.png" alt="6_tablet-personel-project-selected" title="6_tablet-personel-project-selected"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
  
 
@@ -148,8 +146,7 @@ FOLDER STRUCTURE
 7.  **`Mobile & Tablet user create project action`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244271-f5d10400-b3d6-11e9-8a86-4be24ac52627.png" alt="7_mobile-personel-project-create-feature" title="7_mobile-personel-project-create-feature"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244272-f6699a80-b3d6-11e9-8809-de2b6d0b74df.png" alt="7_tablet-personel-project-create-feature" title="7_tablet-personel-project-create-feature"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
@@ -163,8 +160,7 @@ FOLDER STRUCTURE
 8.  **`Mobile & Tablet user create project action`** 
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244273-f6699a80-b3d6-11e9-9f47-31652708b47d.png" alt="8_mobile-personel-project-update-feature" title="8_mobile-personel-project-update-feature"/>
 <img align="left" src="https://user-images.githubusercontent.com/18241226/62244274-f6699a80-b3d6-11e9-8363-f5c6ec727729.png" alt="8_tablet-personel-project-update-feature" title="8_tablet-personel-project-update-feature"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
