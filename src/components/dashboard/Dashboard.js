@@ -26,9 +26,7 @@ import "./dashboard.css";
       <div className="dashboard">
       
         <div className="title">
-          {(projects &&  projects.length > 0) ?
-          (<h2>Current project.</h2>) : 
-          (<h2>Start creating project.</h2>)}
+          {(!projects ) && <h2>Start creating project.</h2>}
         </div>
 
       

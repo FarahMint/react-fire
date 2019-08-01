@@ -66,8 +66,8 @@ background: var(--mainWhite);
 }
  
  
-
-@media(min-width:768px){
+/* with greater value then 769px */
+@media(min-width:769px){
     .side-drawer{
         display:none; 
     }

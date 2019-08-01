@@ -32,8 +32,8 @@ object-fit: cover;
   font-weight: 700;
   padding:.5rem;
   text-transform: uppercase;
-  color:var(--mainWhite); 
-  background:#595ad4;
+  color:var(--mainBlack); 
+  background:#f3f6f8;;
   }
 
 .project__summary p{

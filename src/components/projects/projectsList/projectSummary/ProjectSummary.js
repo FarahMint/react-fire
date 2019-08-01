@@ -8,7 +8,7 @@ const ProjectSummary =({project, auth }) => {
   return (
     <article className="project__summary">
   
-  <h5>{project.title} </h5>
+  
   <div className="img-container">
   { project.picture ? 
   (<img src={project.picture} alt={project.title} className="tile"></img>) :
@@ -16,7 +16,7 @@ const ProjectSummary =({project, auth }) => {
 }
   </div>
  
-
+  <h5>{project.title} </h5>
   <p>posted by:
  {auth.uid === project.authorId ? (
      <React.Fragment>

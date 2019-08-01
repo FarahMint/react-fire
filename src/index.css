@@ -241,6 +241,10 @@ input:focus, select:focus, textarea:focus, button:focus{
 
 /* SHOWCASE */
 .homePage {
+
+  display: flex;
+  align-items: center;
+
   padding: 5rem 0;
   text-align: center;
 height: 100vh;
@@ -255,13 +259,10 @@ color:#fefefe;
   width: 90vw;
   display: grid;
   grid-template-columns: 1fr ;
-  grid-gap:2rem;
-  align-items: center;
+  align-items:center;
   margin: 2rem auto;
 }
-.banner-center-img img{
-  width: 100%;
-}
+ 
 
 .banner h1 {
   font-size: 3rem;
@@ -435,6 +436,9 @@ a.cta-btn:hover {
 @media(max-width:768px){
   .toolbar_navigation-items{
       display:none; 
+    }
+    .banner-center-img img{
+      display:none; 
   }
 }
 
@@ -466,6 +470,8 @@ a.cta-btn:hover {
   /* showcase banner-center */
   .banner-center{
     grid-template-columns: 1fr 1fr;
+    grid-gap:2rem;
+    
   }
 }
 
