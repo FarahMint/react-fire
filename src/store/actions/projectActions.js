@@ -8,7 +8,8 @@ import {
     UPDATE_PROJECT, 
     UPDATE_ERROR, 
     DELETE_PROJECT,
-    DELETE_ERROR 
+    DELETE_ERROR ,
+  
   } from './actionTypes.js';
 
 
@@ -36,6 +37,8 @@ function createProjectwithNofile(project){
             authorLastName: profile.lastName, 
             authorId:authorId, 
             createdAt: new Date() ,
+            likeCount:0,
+            commentCount:0
          })
           // 3) dispatch action
         .then((docRef)=> dispatch({type:CREATE_PROJECT,project}))
@@ -71,6 +74,8 @@ function createProjectwithfile(project){
                 authorLastName: profile.lastName, 
                 authorId:authorId, 
                 createdAt: new Date() ,
+                likeCount:0,
+                commentCount:0
             })
         }) 
         //5) dispatch action
@@ -148,4 +153,8 @@ export const deleteProject = (id) => {
             .catch( error =>dispatch({type:DELETE_ERROR,id}));
     }
    }
+  
+
+
+
   
