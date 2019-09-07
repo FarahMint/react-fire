@@ -1,10 +1,6 @@
 import React from 'react';
 import moment from "moment";
 
-// import { MdClose} from "react-icons/md";
-
-import "./notifications.css"
-
 const Notifications =({notifications})=> {
  
   return (

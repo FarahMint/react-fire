@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom';
 
 import image01 from '../../images/print-screen.png'
 
-import "./home.css"
 
-export default function Home(props) {
+export default function Home() {
     
     return (   
         <section className="homePage">

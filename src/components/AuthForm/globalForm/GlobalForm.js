@@ -1,10 +1,8 @@
 import React from 'react';
 /**COMPONENTS */
-import Overlay from "../overlay/Overlay";
+import Overlay from "./Overlay";
 import SignIn from "../auth/SignIn";
 import SignUp from "../auth/SignUp";
-/**CSS */
-import "./globalForm.css";
 
 
 const GlobalSignForm= (props) => (

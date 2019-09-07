@@ -1,6 +1,4 @@
-import React from 'react'
-import "./backDrop.css";
-
+import React from 'react';
 
  const BackDrop=  props=>  (
     <div 

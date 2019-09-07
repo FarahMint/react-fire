@@ -1,11 +1,10 @@
 import React from 'react';
-import "./sideDrawer.css";
 import SigninLink from "../navLinks/SigninLink";
 import  SignoutLink from "../navLinks/SignoutLink";
 import {connect}  from "react-redux";
 
 
-const SideDrawer = props =>{
+const Drawer = props =>{
   // destructure props object
  const {auth, profile, toggleNavHandler, show} = props
 
@@ -34,4 +33,4 @@ auth: state.firebase.auth,
 profile: state.firebase.profile
 }
 }
-export default connect(mapStateToProps)(SideDrawer);
+export default connect(mapStateToProps)(Drawer);

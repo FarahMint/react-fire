@@ -4,7 +4,7 @@ import { BrowserRouter , Switch, Route, Redirect} from 'react-router-dom';
 
 /**COMPONENTS */
 import Navbar from './components/layout/navbar/Navbar';
-import SideDrawer from "./components/layout/siderDrawer/SideDrawer";
+import Drawer from "./components/layout/drawer/Drawer";
 import  BackDrop from "./components/layout/backdrop/Backdrop";
 import GlobalForm from "./components/AuthForm/globalForm/GlobalForm";
 import Home from "./components/Home/Home";
@@ -73,7 +73,7 @@ backdropHandler = () =>{
           toggleNavHandler ={this.toggleNavHandler}
           show = {this.state.sideDrawerOpen} 
         />
-        <SideDrawer 
+        <Drawer 
           show = {this.state.sideDrawerOpen} 
           toggleNavHandler ={this.toggleNavHandler}/> 
         {backdrop}
@@ -121,7 +121,7 @@ backdropHandler = () =>{
     </BrowserRouter>
     );
   }
-}
+} 
 
 const mapStateToProps =(state)=>{
   // console.log(state)

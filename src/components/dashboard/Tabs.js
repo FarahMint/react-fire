@@ -9,11 +9,8 @@ const Tabs =(props) =>{
      return label;
     });
 
- 
   const [activeTab , setActiveTab]= useState(labelTab[0]);
   let className;
-
- 
 
     return (
       <>

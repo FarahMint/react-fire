@@ -13,8 +13,7 @@ import {compose} from "redux"
 //HOC with Firestore collection
 import {firestoreConnect} from "react-redux-firebase";
 
-/**CSS */
-import "./dashboard.css";
+
 
   const Dashboard =({projects, auth})=> {
     /**get all presonal projects */

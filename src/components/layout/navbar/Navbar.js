@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import {FaUsers, FaBell} from "react-icons/fa";
 
 /**COMPONENTS */
-import DrawerToggleButton from "../siderDrawer/DrawerToggleButton";
+import ToggleButton from "../drawer/ToggleButton";
 // import SigninLink from "../navLinks/SigninLink";
 // import SignoutLink from "../navLinks/SignoutLink";
 import Notifications from '../../dashboard/notifications/Notifications';
@@ -16,8 +16,6 @@ import Notifications from '../../dashboard/notifications/Notifications';
 // access firebase prop on state to see whether user login
 import {connect}  from "react-redux";
 
-/**CSS */
-import "./navbar.css";
 
 const Navbar = (props) => {
   /**STATE */
@@ -35,7 +33,7 @@ const Navbar = (props) => {
     <header className="toolbar">
       <nav className="toolbar__navigation">
         {/*TOGGLE BTN IN SM SCREEN  */}
-      <DrawerToggleButton 
+      <ToggleButton 
       click={props.toggleNavHandler}
       show ={props.show} />
 
