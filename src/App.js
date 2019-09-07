@@ -8,6 +8,7 @@ import SideDrawer from "./components/layout/siderDrawer/SideDrawer";
 import  BackDrop from "./components/layout/backdrop/Backdrop";
 import GlobalForm from "./components/AuthForm/globalForm/GlobalForm";
 import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
 import Dashboard from "./components/dashboard/Dashboard";
 
 import CreateProject from "./components/projects/createProject/CreateProject";
@@ -67,6 +68,7 @@ backdropHandler = () =>{
 
     return (
       <BrowserRouter>
+  <main>
         <Navbar
           toggleNavHandler ={this.toggleNavHandler}
           show = {this.state.sideDrawerOpen} 
@@ -75,7 +77,9 @@ backdropHandler = () =>{
           show = {this.state.sideDrawerOpen} 
           toggleNavHandler ={this.toggleNavHandler}/> 
         {backdrop}
-        <> 
+
+
+       
         <Switch>
           {/* ROUTE LANDING PAGE WHEN NO LOGGED IN */}
         {!auth.uid && <Route path="/" exact component={Home}></Route>}
@@ -111,7 +115,9 @@ backdropHandler = () =>{
           <Route component={Error}></Route>
 
         </Switch>
-      </>
+        </main>
+        <Footer/>
+     
     </BrowserRouter>
     );
   }

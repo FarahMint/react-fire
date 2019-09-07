@@ -2,8 +2,10 @@
 /* PROJECT DETAILS  */
  
 .card__projDetails{
+ 
   max-width: 950px;
   width: 80%;
+  height: 95vh;
   margin: 0 auto;
   color: #333;
   background-color: #fefefe;

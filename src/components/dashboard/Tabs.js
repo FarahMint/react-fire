@@ -17,7 +17,7 @@ const Tabs =(props) =>{
 
     return (
       <>
-      <section className="tabs">
+      <div className="tabs">
         <div className="container">
           
             {props.children.map((child) => {
@@ -41,14 +41,14 @@ const Tabs =(props) =>{
             })}
         
         </div>
-        </section>
+        </div>
 
-        <main className="featured__projects-center">
+        <div className="featured__projects-center">
           {props.children.map((child) => {
             if (child.props.label !== activeTab) return undefined;
             return child.props.children;
           })}
-        </main>
+        </div>
         </>
     );
   }

@@ -25,7 +25,7 @@
 @media only screen and (min-width: 769px) { 
   .featured__projects-center{
     width: 90vw;
-    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
   }
   /* each individual tab div */
 .tabs .container>div {

@@ -30,8 +30,6 @@
 
 /* GLOBAL*/
 
-/*GLOBAL*/
-
 body {
   color: var(--mainBlack);
   background: var(--mainWhite);
@@ -76,7 +74,9 @@ input:focus, select:focus, textarea:focus, button:focus{
   outline: none;
 }
 
-
+ main{
+   height:100%;
+ }
 
 .error {
   text-align: center;
@@ -85,168 +85,16 @@ input:focus, select:focus, textarea:focus, button:focus{
 }
 /* END GLOBAL */
 
-/* NAVBAR*/
-.toolbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  background: #000;
-  z-index: 1;
-}
-
-.toolbar__navigation{
-  display: flex;
-  align-items:center;
-} 
-  
- /* div surrounding badge position in sm*/
-.toolbar__badge {
-  margin-left: auto;
-  margin-right: 2rem;
-
-  display: flex;
-  align-items: center;
-}
-
-
-.toolbar__logo a {
-  font-size:2.25rem;
-  margin-left: 1rem;
-}
-
-.logo {
-    color:#9c47fc;
-  }
-  
-/*** toggle btn sm screen ***/
-
- .toggle-button{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-  height: 25px;
-  width: 30px;
-  background: transparent;
-  border: none;
-  padding:0;
-
-}
- 
-.toggle-button__line{
-  width: 30px;
-  height: 2px;
-  background: var(--mainWhite);
-  transition: var(--mainTransition);
-}
-
-.toolbar_toogle-button{
-  position: absolute;
-  right: 20px;
- 
-}
-
-/* change shape form of hambuger menu to x for close menu*/
-.toggle-button__line.active:nth-child(1){
-  opacity:0;
-}
-.toggle-button__line.active:nth-child(2){
- transform: rotate(45deg);
-}
-.toggle-button__line.active:nth-child(3){
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 18px;
- 
-}
-
-/*** end toggle btn sm screen ***/
- 
-/* cta btn when not logged in*/
-
-/* cta btn when not logged in*/
-
-/* BADGE INITIAL WHEN LOGGED IN*/
-.badge{
-  border-radius: 50%;
-  padding: .45rem;
-  text-transform: uppercase;
-  background: #595ad4;
-  color:#fefefe;
-}
-
-.badge:hover{
-  color:  #595ad4;
-  background: #fefefe;
-}
-/* END  BADGE INITIAL WHEN LOGGED IN*/
-
-
-
- 
- .toolbar_navigation-items{
-   flex:2;
-  } 
-
- .toolbar_navigation-items ul{
-  list-style:none;
-  display: flex; 
-  align-items: center;
-} 
- 
-.toolbar_navigation-items li{
-  list-style:none;
-    padding: 0 .75rem; 
-    transition: var(--mainTransition);
-}
-  
-.nav-link{
-  color:#fefefe;
-  text-transform: uppercase;
-  padding: 1rem 0;
-  color: var(--mainWhite);
-  transition: var(--mainTransition);
-  text-align: center;
-  font-size: 1rem;
-  letter-spacing: var(--mainSpacing);
-  }
-  .nav-link:hover ,
-  .nav-link:active{
-      background: #fefefe;
-     color: #595ad4;
-     padding-left:1rem;
-     padding-right:1rem;
-  }    
-.icon-notification{
-  margin: 0 1rem;
-  font-size:2rem;
-  color:var(--mainPurple);
-  cursor: pointer;  
- }
-
-.icon-notification:hover{
-    color:var(--mainPurple);  
-}
-
-/*  NAVLINKS ORDER WHEN LOGGED IN*/
- 
-/* END  NAVLINKS ORDER WHEN LOGGED IN*/
-
-/* END NAVBAR*/
 
 /* APP CONTAINER */
- 
 
 /* SHOWCASE */
 .homePage {
 
-  display: flex;
-  align-items: center;
-
-  padding: 5rem 0;
-  text-align: center;
+display: flex;
+align-items: center;
+padding: 5rem 0;
+text-align: center;
 height: 100vh;
 background-color: #ff0000;
 background-image: url("./images/Quantum-Gradient.svg");
@@ -276,23 +124,6 @@ color:#fefefe;
   font-size: 1rem;
   letter-spacing: var(--mainSpacing);
 }
-
-.cta-more{ 
-  background-color:#0d91ca;
-  margin-top:2rem; 
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-  border:none;
-
-}
-
-.cta-more:hover {
-  background-image: linear-gradient(to right, #25aae1 0%, #4481eb 60%, #3f86ed 100%);
-  background-position: 100% 0;
-  -moz-transition: var(--mainTransition);
-  -o-transition: var(--mainTransition);
-  -webkit-transition: var(--mainTransition);
-  transition: var(--mainTransition);
-}
 /* END SHOWCASE */
 
 /* LOGIN/SIGNUP FORM */
@@ -302,6 +133,7 @@ color:#fefefe;
   justify-content: space-evenly;
   align-items: center;
   padding-top: 60px;
+  margin: 0 1rem;
 
 }
 .form-container > form{
@@ -346,37 +178,17 @@ textarea.form-control{
 
 /* PROJECT FORMS*/
 .project__form{
-  margin: 8rem 2rem;
+  margin-top: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
-/* END PROJECT FORMS*/
-
-/* REGISTRATION & SIGN IN FORM */
-
-/* END REGISTRATION - SIGN IN FORM */
-
-/* BUTTON */
-/* END BUTTON */
-/* PROJECT  FORM*/
 
 .input__date{ 
   display: flex;
 }
 
 
-/* button{
- border-radius:20px;
- background: #0d91ca;
- color: var(--mainWhite);
- font-size: 1rem;
- font-weight:bold;
- padding:12px 45px;
- letter-spacing:1px;
- cursor:pointer;
-  text-transform:uppercase; 
-} */
-
 button{
-
  font-size: 1rem;
  padding:12px 45px;
  letter-spacing:1px;
@@ -386,13 +198,65 @@ button{
 
 .btn-primary{
   padding: 11px;
-  width: 100%;
-  /* max-width: 300px; */
+  width: 50%;
   font-weight: 700;
 
   background: #6c5ce7;
   box-shadow: unset;
   color: #fff;
+}
+  /* CTA BTN NAV HOME*/
+  .cta-btn{
+    padding: 1rem;
+    border-radius: 5px;
+    text-align:center;
+    color: #fff;
+    background:#e80a89;
+    text-transform: uppercase;  
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75); 
+    -moz-transition: var(--mainTransition);
+    -o-transition: var(--mainTransition);
+    -webkit-transition: var(--mainTransition);
+    transition: var(--mainTransition);
+  }
+.cta-btn:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #595ad4 0%, #e80a89 100%);
+    background-position: 0 100%; 
+  }
+    /* END CTA BTN NAV HOME*/
+    /* CTA BTN  HOME*/
+    .cta-more{ 
+      background-color:#0d91ca;
+      margin-top:2rem; 
+      box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+      border:none;
+    
+    }
+    
+    .cta-more:hover {
+      background-image: linear-gradient(to right, #25aae1 0%, #4481eb 60%, #3f86ed 100%);
+      background-position: 100% 0;
+      -moz-transition: var(--mainTransition);
+      -o-transition: var(--mainTransition);
+      -webkit-transition: var(--mainTransition);
+      transition: var(--mainTransition);
+    }
+    /* END CTA BTN HOME*/
+
+
+/* FOOTER */
+footer{
+ 
+  width: 100vw;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  background: #232526;
+  background: -webkit-linear-gradient( to left, #414345, #232526 );
+  background: linear-gradient( to left, #414345, #232526 );
 }
 
 
@@ -410,33 +274,15 @@ button{
   }
 
 
-  /* CTA BTN NAV HOME*/
-.cta-btn{
-    padding: 1rem;
-    border-radius: 5px;
-    color: #fff;
-    background:#e80a89;
-    text-transform: uppercase;  
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75); 
-    -moz-transition: var(--mainTransition);
-    -o-transition: var(--mainTransition);
-    -webkit-transition: var(--mainTransition);
-    transition: var(--mainTransition);
-  }
-a.cta-btn:hover {
-    color: #fff;
-    background-image: linear-gradient(to right, #595ad4 0%, #e80a89 100%);
-    background-position: 0 100%; 
-  }
-    /* END CTA BTN NAV HOME*/
+
 
 }
 
 /* for any screen with width less than 768*/
 @media(max-width:768px){
-  .toolbar_navigation-items{
+  /* .toolbar_navigation-items{
       display:none; 
-    }
+    } */
     .banner-center-img img{
       display:none; 
   }
@@ -444,9 +290,9 @@ a.cta-btn:hover {
 
 /* for screen  with greater than 769px*/
 @media(min-width:769px){
-  .toolbar_toogle-button{
+  /* .toolbar_toogle-button{
       display:none; 
-  }
+  } */
   .toolbar__logo {
     margin-left:0;
   }

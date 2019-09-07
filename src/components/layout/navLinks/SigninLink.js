@@ -14,15 +14,17 @@ const SigninLink = (props)=>  {
  
     return ( 
     <React.Fragment>  
+
+          <li>
+            <NavLink to="/" className="nav-link">Dashboard</NavLink>
+          </li> 
+
           <li>
             <NavLink to="/create" className="nav-link">
               <FaPlus/>create
             </NavLink>
-          </li>  
+          </li>    
 
-          <li>
-            <NavLink to="/" className="nav-link">Dashboard</NavLink>
-          </li>  
           <li>
             <NavLink to="/" onClick={props.signOut}
             className="nav-link">logout</NavLink>

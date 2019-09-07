@@ -1,7 +1,7 @@
 .side-drawer{
-    height: 100%;
-    background: #fefefe;
+    background: #3b3b3b;
     box-shadow: 1px 0px  7px rgba(0,0,0,0.5);
+    height: 100%;
     position: fixed;
     top:0;
     left:0;
@@ -20,6 +20,7 @@
 
 
 .side-drawer ul{
+    margin-top: 3rem;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -32,17 +33,34 @@
  width: 100%;
  cursor: pointer;
 }
+.side-drawer li:first-child{
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.side-drawer li a{
+    display: block;
+    width: 100%;
+    color: var(--mainWhite);
+      text-decoration: none;
+      font-family: CircularStd, sans-serif;
+      font-weight: 500;
+      text-transform: lowercase;
+  }
+  .side-drawer li a .icon-notification{
+    color: var(--mainPurple);
+      text-decoration: none;
+      font-size:1.2rem;
+      text-transform: uppercase;
+  }
+
 .side-drawer li:hover > a,
 .side-drawer li:active > a{
 background: var(--mainPurple);
 color:var(--mainWhite);
 }
 
-.side-drawer li:hover,
-.side-drawer li:active{
-color:var(--mainWhite);
-background:var(--mainPurple);
-}
+ 
 
 .badge{
 order:3;
@@ -52,23 +70,12 @@ color: var(--mainPurple);
 background: var(--mainWhite);
 }
 
-.side-drawer li a{
-  color: var(--mainPurple);
-    text-decoration: none;
-    font-size:1.2rem;
-    text-transform: uppercase;
-}
-.side-drawer li a .icon-notification{
-  color: var(--mainPurple);
-    text-decoration: none;
-    font-size:1.2rem;
-    text-transform: uppercase;
-}
+
  
  
 /* with greater value then 769px */
-@media(min-width:769px){
+/* @media(min-width:769px){
     .side-drawer{
         display:none; 
     }
-}
+} */  

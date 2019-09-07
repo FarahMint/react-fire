@@ -7,8 +7,8 @@ import {FaUsers, FaBell} from "react-icons/fa";
 
 /**COMPONENTS */
 import DrawerToggleButton from "../siderDrawer/DrawerToggleButton";
-import SigninLink from "../navLinks/SigninLink";
-import SignoutLink from "../navLinks/SignoutLink";
+// import SigninLink from "../navLinks/SigninLink";
+// import SignoutLink from "../navLinks/SignoutLink";
 import Notifications from '../../dashboard/notifications/Notifications';
 
 
@@ -16,17 +16,20 @@ import Notifications from '../../dashboard/notifications/Notifications';
 // access firebase prop on state to see whether user login
 import {connect}  from "react-redux";
 
-
+/**CSS */
+import "./navbar.css";
 
 const Navbar = (props) => {
   /**STATE */
   const [showNotif, setShowNotif] = useState(false)
-  const {auth, profile,notifications} = props
+  const {auth,
+    //  profile,notifications
+    } = props
  
   /** LINKS ACCORDING TO LOGIN STATUS*/
-  const links = auth.uid ?  <SigninLink 
-  profile={profile}
-  notifications={notifications}/> : <SignoutLink />
+  // const links = auth.uid ?  <SigninLink 
+  // profile={profile}
+  // notifications={notifications}/> : <SignoutLink />
 
   return ( 
     <header className="toolbar">
@@ -44,9 +47,9 @@ const Navbar = (props) => {
         {/* <div className="spacer"></div> */}
 
         {/* NAVIGATIONS */}
-        <div className="toolbar_navigation-items">
+        {/* <div className="toolbar_navigation-items">
           <ul>{links}</ul>
-        </div>
+        </div> */}
 
         {auth.uid && 
           <div className="toolbar__badge">
