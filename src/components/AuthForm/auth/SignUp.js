@@ -37,7 +37,10 @@ import {signUp} from "../../../store/actions/authActions";
     if(auth.uid) return <Redirect to="/"/>
     return (
     <React.Fragment>
-      <div className="form-container sign-up-container">        
+      <div className="form-container sign-up-container"> 
+
+   
+
         <form onSubmit={this.handleSubmit}>
         {/* error notif */}
          <div className=
