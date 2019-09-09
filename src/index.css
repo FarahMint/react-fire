@@ -578,6 +578,7 @@ button{
     -o-transition: var(--mainTransition);
     -webkit-transition: var(--mainTransition);
     transition: var(--mainTransition);
+    cursor:pointer;
   }
 .cta-btn:hover {
     color: #fff;
@@ -613,6 +614,24 @@ button{
   padding: 5rem 0;
 }
 
+.filter-projects{
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem auto;
+  align-items: center;
+}
+
+.select-project{
+  font-size: 16px;
+  font-weight: 400;
+  height: 48px;
+  color: #484848;
+  background: none;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  padding: 8px 11px 11px;
+}
+
 /* TITLE*/
 .title{
   text-align: center;
@@ -628,6 +647,7 @@ button{
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
 }
+
 
 
 

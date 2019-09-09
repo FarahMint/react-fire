@@ -42,7 +42,6 @@ const Navbar = (props) => {
           <Link to="/"> <FaUsers className="logo"/></Link>
         </div>
  
-        {/* <div className="spacer"></div> */}
 
         {/* NAVIGATIONS */}
         {/* <div className="toolbar_navigation-items">

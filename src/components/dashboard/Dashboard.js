@@ -1,10 +1,14 @@
-import React from 'react';
+import React ,{useState} 
+from 'react';
 import {Redirect} from "react-router-dom";
 
 /**COMPONENTS */
-import Tabs from './Tabs';
-import ProjectList from "../projects/projectsList/ProjectList";
-import PersonalProject from "./PersonalProject";
+// import Tabs from './Tabs';
+// import PersonalProject from "./PersonalProject";
+import FilterProject  from "./FilterProject";
+ import ProjectList from "../projects/projectsList/ProjectList";
+
+
 
 /**REDUX */
 import {connect} from "react-redux"
@@ -15,9 +19,23 @@ import {firestoreConnect} from "react-redux-firebase";
 
 
 
-  const Dashboard =({projects, auth})=> {
-    /**get all presonal projects */
-  const personalProj = projects && projects.filter(project => auth.uid === project.authorId );
+const Dashboard =({projects, auth})=> {
+
+/**filter all personal projects */
+const personalProj = projects && projects.filter(project => auth.uid === project.authorId );
+/** display state according to option selected*/
+const[value, setValue]=  useState();
+const[displayProjects, setDisplayProjects]=  useState();
+
+ const handleChange= (event)=>{
+  if( event.target.value.includes("all projects")){  
+      setValue(event.target.value); 
+      setDisplayProjects(<ProjectList  projects={projects} auth={auth} />)
+    }else{
+      setValue(event.target.value);
+      setDisplayProjects(<ProjectList  projects={personalProj} auth={auth} />)
+  } 
+ }
 
    if (!auth.uid)return <Redirect to="/signIn"/>
 
@@ -28,7 +46,18 @@ import {firestoreConnect} from "react-redux-firebase";
           {(!projects ) && <h2>Start creating project.</h2>}
         </div>
 
-      
+        <FilterProject 
+        value= {value}
+        handleChange={handleChange}/>
+
+
+
+      <div className="featured__projects-center">
+        {!displayProjects ? <ProjectList  projects={projects} auth={auth} />  : displayProjects}
+      </div> 
+              
+       
+        {/* removed tabs for filter
         <Tabs>
           <div label="all projects">
               <ProjectList  projects={projects} auth={auth} /> 
@@ -37,7 +66,8 @@ import {firestoreConnect} from "react-redux-firebase";
           <div label="your personal project">
             <PersonalProject  projects={personalProj} auth={auth} />   
           </div>
-        </Tabs>
+        </Tabs> */}
+        
       </div>
     )
   }
