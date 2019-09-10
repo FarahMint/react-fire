@@ -7,8 +7,6 @@ import {FaUsers, FaBell} from "react-icons/fa";
 
 /**COMPONENTS */
 import ToggleButton from "../drawer/ToggleButton";
-// import SigninLink from "../navLinks/SigninLink";
-// import SignoutLink from "../navLinks/SignoutLink";
 import Notifications from '../../dashboard/notifications/Notifications';
 
 
@@ -20,34 +18,23 @@ import {connect}  from "react-redux";
 const Navbar = (props) => {
   /**STATE */
   const [showNotif, setShowNotif] = useState(false)
-  const {auth,
-    //  profile,notifications
-    } = props
- 
-  /** LINKS ACCORDING TO LOGIN STATUS*/
-  // const links = auth.uid ?  <SigninLink 
-  // profile={profile}
-  // notifications={notifications}/> : <SignoutLink />
+  /** */
+  const {auth, profile,notifications, toggleNavHandler , show} = props
+
 
   return ( 
     <header className="toolbar">
       <nav className="toolbar__navigation">
         {/*TOGGLE BTN IN SM SCREEN  */}
       <ToggleButton 
-      click={props.toggleNavHandler}
-      show ={props.show} />
+      click={toggleNavHandler}
+      show ={show} />
 
          {/*LOGO */}
         <div className="toolbar__logo">
           <Link to="/"> <FaUsers className="logo"/></Link>
         </div>
  
-
-        {/* NAVIGATIONS */}
-        {/* <div className="toolbar_navigation-items">
-          <ul>{links}</ul>
-        </div> */}
-
         {auth.uid && 
           <div className="toolbar__badge">
           {/* NOTIF ICON */}
@@ -57,16 +44,18 @@ const Navbar = (props) => {
                 onMouseLeave={()=>setShowNotif(false)}
                 className="icon-notification"/>
 
-            {(props.notifications && props.notifications.length > 0 && showNotif ) ?
-            (<Notifications notifications={props.notifications }/>)
+            {(notifications && notifications.length > 0 && showNotif ) ?
+            (<Notifications 
+              auth={auth} 
+              notifications={notifications }/>)
             : null}
             </span>
                    
             {/* BADGE WITH INITIAL */}
             <span
               className="badge" 
-              title={`you are log in as ${props.profile.firstName}`}
-              aria-label={props.profile.firstName}>{props.profile.initials} 
+              title={`you are log in as ${profile.firstName}`}
+              aria-label={profile.firstName}>{profile.initials} 
             </span>
           </div>}
       
@@ -76,7 +65,6 @@ const Navbar = (props) => {
 };
 
 const mapStateToProps =(state)=>{
-  //  console.log(state)
 return{
 auth: state.firebase.auth,
 profile: state.firebase.profile,

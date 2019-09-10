@@ -639,7 +639,7 @@ button{
 }
 
 /* PROJECTS LIST*/
-.featured__projects-center{
+.featured__projects-center {
   width: 80vw;
   margin: 0 auto;
   display: grid;
@@ -647,13 +647,17 @@ button{
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
 }
+.featured__projects-center a {
+  width: 270px;
+  
+}
 
 
 
 
 /* Change the direction of the form when the browser window is 700px wide or more */
 @media only screen and (min-width: 769px) { 
-  .featured__projects-center{
+  .featured__projects-center {
     width: 90vw;
     grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
   }
@@ -697,7 +701,7 @@ button{
  * ==================== NOTIFICATIONS====================
 */
 .notifications-control {
-  background-color: #dcdde0;
+  background-color: rgba(0,0,0,.5);
   display: inline-block;
   padding: 10px;
   height: auto;
@@ -715,8 +719,8 @@ button{
   margin-bottom: 10px;
   overflow: hidden;
   padding: 8px;
-  background-color: #fff;
-  animation: barFadeIn 4s ease-in-out;
+  background-color: var(--mainBlack);
+  animation: all 4s ease-in-out;
   transform-origin: top;
 }
 
@@ -747,7 +751,7 @@ button{
 .messageBar>article {
   padding-left: 2px;
   margin-top: 10px;
-  color: #898989;
+  color: var(--mainWhite);
 }
 
 /*
